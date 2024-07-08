@@ -1,0 +1,172 @@
+<html>
+<head><link rel='stylesheet' type='text/css' href='styles.css'>
+<link rel="icon" type="image/png" href="diffmining.png">
+</head>
+<style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body>
+<h1>Geo $[t_{min}, t_{max}]$</h1>
+<table class='radio-buttons'><tr><td style='padding: 10px 10px;'>
+<input type='radio' name='type' value='0.0-0.1' onclick='updateImages()' checked>0.0-0.1</td>
+<td style='padding: 10px 10px;'><input type='radio' name='type' value='0.1-0.2' onclick='updateImages()'>0.1-0.2</td>
+<td style='padding: 10px 10px;'><input type='radio' name='type' value='0.2-0.3' onclick='updateImages()'>0.2-0.3</td>
+<td style='padding: 10px 10px;'><input type='radio' name='type' value='0.3-0.4' onclick='updateImages()'>0.3-0.4</td>
+<td style='padding: 10px 10px;'><input type='radio' name='type' value='0.4-0.5' onclick='updateImages()'>0.4-0.5</td>
+<td style='padding: 10px 10px;'><input type='radio' name='type' value='0.5-0.6' onclick='updateImages()'>0.5-0.6</td>
+<td style='padding: 10px 10px;'><input type='radio' name='type' value='0.6-0.7' onclick='updateImages()'>0.6-0.7</td>
+<td style='padding: 10px 10px;'><input type='radio' name='type' value='0.7-0.8' onclick='updateImages()'>0.7-0.8</td>
+<td style='padding: 10px 10px;'><input type='radio' name='type' value='0.8-0.9' onclick='updateImages()'>0.8-0.9</td>
+<td style='padding: 10px 10px;'><input type='radio' name='type' value='0.9-1.0' onclick='updateImages()'>0.9-1.0</td>
+</tr>
+</table>
+
+<table class='radio-buttons'><tr><td style='padding: 15px 10px;'><input type='radio' name='cat' value='United States' onclick='updateImages()'>United States</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Japan' onclick='updateImages()'>Japan</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='France' onclick='updateImages()'>France</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Italy' onclick='updateImages()'>Italy</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='United Kingdom' onclick='updateImages()'>United Kingdom</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Brazil' onclick='updateImages()'>Brazil</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Russia' onclick='updateImages()'>Russia</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Thailand' onclick='updateImages()'>Thailand</td><td style='padding: 10px 10px;'><input type='radio' name='cat' value='Nigeria' onclick='updateImages()'>Nigeria</td><td style='padding: 10px 10px;'><input type='radio' name='cat' value='India' onclick='updateImages()'>India</td></tr></table>
+<img src='range\0.0-0.1\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_United States' style='display: none;'>
+<img src='range\0.0-0.1\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_Brazil' style='display: none;'>
+<img src='range\0.0-0.1\France__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_France' style='display: none;'>
+<img src='range\0.0-0.1\India__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_India' style='display: none;'>
+<img src='range\0.0-0.1\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_Italy' style='display: none;'>
+<img src='range\0.0-0.1\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_Japan' style='display: none;'>
+<img src='range\0.0-0.1\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_Nigeria' style='display: none;'>
+<img src='range\0.0-0.1\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_Russia' style='display: none;'>
+<img src='range\0.0-0.1\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_Thailand' style='display: none;'>
+<img src='range\0.0-0.1\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_United Kingdom' style='display: none;'>
+<img src='range\0.0-0.1\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.0-0.1_United States' style='display: none;'>
+
+<img src='range\0.1-0.2\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_United States' style='display: none;'>
+<img src='range\0.1-0.2\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_Brazil' style='display: none;'>
+<img src='range\0.1-0.2\France__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_France' style='display: none;'>
+<img src='range\0.1-0.2\India__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_India' style='display: none;'>
+<img src='range\0.1-0.2\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_Italy' style='display: none;'>
+<img src='range\0.1-0.2\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_Japan' style='display: none;'>
+<img src='range\0.1-0.2\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_Nigeria' style='display: none;'>
+<img src='range\0.1-0.2\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_Russia' style='display: none;'>
+<img src='range\0.1-0.2\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_Thailand' style='display: none;'>
+<img src='range\0.1-0.2\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_United Kingdom' style='display: none;'>
+<img src='range\0.1-0.2\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.1-0.2_United States' style='display: none;'>
+
+<img src='range\0.2-0.3\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_United States' style='display: none;'>
+<img src='range\0.2-0.3\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_Brazil' style='display: none;'>
+<img src='range\0.2-0.3\France__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_France' style='display: none;'>
+<img src='range\0.2-0.3\India__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_India' style='display: none;'>
+<img src='range\0.2-0.3\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_Italy' style='display: none;'>
+<img src='range\0.2-0.3\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_Japan' style='display: none;'>
+<img src='range\0.2-0.3\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_Nigeria' style='display: none;'>
+<img src='range\0.2-0.3\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_Russia' style='display: none;'>
+<img src='range\0.2-0.3\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_Thailand' style='display: none;'>
+<img src='range\0.2-0.3\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_United Kingdom' style='display: none;'>
+<img src='range\0.2-0.3\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.2-0.3_United States' style='display: none;'>
+
+<img src='range\0.3-0.4\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_United States' style='display: none;'>
+<img src='range\0.3-0.4\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_Brazil' style='display: none;'>
+<img src='range\0.3-0.4\France__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_France' style='display: none;'>
+<img src='range\0.3-0.4\India__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_India' style='display: none;'>
+<img src='range\0.3-0.4\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_Italy' style='display: none;'>
+<img src='range\0.3-0.4\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_Japan' style='display: none;'>
+<img src='range\0.3-0.4\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_Nigeria' style='display: none;'>
+<img src='range\0.3-0.4\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_Russia' style='display: none;'>
+<img src='range\0.3-0.4\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_Thailand' style='display: none;'>
+<img src='range\0.3-0.4\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_United Kingdom' style='display: none;'>
+<img src='range\0.3-0.4\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.3-0.4_United States' style='display: none;'>
+
+<img src='range\0.4-0.5\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_United States' style='display: none;'>
+<img src='range\0.4-0.5\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_Brazil' style='display: none;'>
+<img src='range\0.4-0.5\France__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_France' style='display: none;'>
+<img src='range\0.4-0.5\India__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_India' style='display: none;'>
+<img src='range\0.4-0.5\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_Italy' style='display: none;'>
+<img src='range\0.4-0.5\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_Japan' style='display: none;'>
+<img src='range\0.4-0.5\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_Nigeria' style='display: none;'>
+<img src='range\0.4-0.5\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_Russia' style='display: none;'>
+<img src='range\0.4-0.5\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_Thailand' style='display: none;'>
+<img src='range\0.4-0.5\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_United Kingdom' style='display: none;'>
+<img src='range\0.4-0.5\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.4-0.5_United States' style='display: none;'>
+
+<img src='range\0.5-0.6\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_United States' style='display: none;'>
+<img src='range\0.5-0.6\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_Brazil' style='display: none;'>
+<img src='range\0.5-0.6\France__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_France' style='display: none;'>
+<img src='range\0.5-0.6\India__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_India' style='display: none;'>
+<img src='range\0.5-0.6\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_Italy' style='display: none;'>
+<img src='range\0.5-0.6\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_Japan' style='display: none;'>
+<img src='range\0.5-0.6\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_Nigeria' style='display: none;'>
+<img src='range\0.5-0.6\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_Russia' style='display: none;'>
+<img src='range\0.5-0.6\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_Thailand' style='display: none;'>
+<img src='range\0.5-0.6\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_United Kingdom' style='display: none;'>
+<img src='range\0.5-0.6\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.5-0.6_United States' style='display: none;'>
+
+<img src='range\0.6-0.7\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_United States' style='display: none;'>
+<img src='range\0.6-0.7\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_Brazil' style='display: none;'>
+<img src='range\0.6-0.7\France__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_France' style='display: none;'>
+<img src='range\0.6-0.7\India__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_India' style='display: none;'>
+<img src='range\0.6-0.7\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_Italy' style='display: none;'>
+<img src='range\0.6-0.7\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_Japan' style='display: none;'>
+<img src='range\0.6-0.7\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_Nigeria' style='display: none;'>
+<img src='range\0.6-0.7\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_Russia' style='display: none;'>
+<img src='range\0.6-0.7\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_Thailand' style='display: none;'>
+<img src='range\0.6-0.7\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_United Kingdom' style='display: none;'>
+<img src='range\0.6-0.7\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.6-0.7_United States' style='display: none;'>
+
+<img src='range\0.7-0.8\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_United States' style='display: none;'>
+<img src='range\0.7-0.8\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_Brazil' style='display: none;'>
+<img src='range\0.7-0.8\France__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_France' style='display: none;'>
+<img src='range\0.7-0.8\India__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_India' style='display: none;'>
+<img src='range\0.7-0.8\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_Italy' style='display: none;'>
+<img src='range\0.7-0.8\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_Japan' style='display: none;'>
+<img src='range\0.7-0.8\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_Nigeria' style='display: none;'>
+<img src='range\0.7-0.8\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_Russia' style='display: none;'>
+<img src='range\0.7-0.8\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_Thailand' style='display: none;'>
+<img src='range\0.7-0.8\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_United Kingdom' style='display: none;'>
+<img src='range\0.7-0.8\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.7-0.8_United States' style='display: none;'>
+
+<img src='range\0.8-0.9\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_United States' style='display: none;'>
+<img src='range\0.8-0.9\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_Brazil' style='display: none;'>
+<img src='range\0.8-0.9\France__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_France' style='display: none;'>
+<img src='range\0.8-0.9\India__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_India' style='display: none;'>
+<img src='range\0.8-0.9\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_Italy' style='display: none;'>
+<img src='range\0.8-0.9\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_Japan' style='display: none;'>
+<img src='range\0.8-0.9\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_Nigeria' style='display: none;'>
+<img src='range\0.8-0.9\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_Russia' style='display: none;'>
+<img src='range\0.8-0.9\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_Thailand' style='display: none;'>
+<img src='range\0.8-0.9\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_United Kingdom' style='display: none;'>
+<img src='range\0.8-0.9\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.8-0.9_United States' style='display: none;'>
+
+<img src='range\0.9-1.0\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_United States' style='display: none;'>
+<img src='range\0.9-1.0\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_Brazil' style='display: none;'>
+<img src='range\0.9-1.0\France__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_France' style='display: none;'>
+<img src='range\0.9-1.0\India__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_India' style='display: none;'>
+<img src='range\0.9-1.0\Italy__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_Italy' style='display: none;'>
+<img src='range\0.9-1.0\Japan__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_Japan' style='display: none;'>
+<img src='range\0.9-1.0\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_Nigeria' style='display: none;'>
+<img src='range\0.9-1.0\Russia__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_Russia' style='display: none;'>
+<img src='range\0.9-1.0\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_Thailand' style='display: none;'>
+<img src='range\0.9-1.0\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_United Kingdom' style='display: none;'>
+<img src='range\0.9-1.0\United States__hard_limit_20__top_k_32__min_im_0.png' id='0.9-1.0_United States' style='display: none;'>
+
+<script>function updateImages(){
+var type = document.querySelector('input[name=type]:checked').value;
+var cat = document.querySelector('input[name=cat]:checked').value;
+var images = document.querySelectorAll('img');
+images.forEach(
+    function(img) {
+        console.log(type + '_' + cat)
+        if (img.id.startsWith(type + '_' + cat)) {
+            img.style.display = 'block';
+        } else {
+            img.style.display = 'none';
+        }
+    }
+);
+}
+</script>
+</body></html>

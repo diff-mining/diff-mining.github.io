@@ -1,0 +1,1181 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Viewer</title>
+    <style>
+        th, td {
+            padding: 8px;
+            text-align: center; /* Added property to center align text */
+        }
+    </style>
+<link rel="icon" type="image/png" href="diffmining.png">
+</head>
+<body>
+    <center>
+    <h1>Places 365</h1>
+    <div id="imageContainer"></div>
+    <br>
+    <form>
+        <table>
+            <tr>
+                <td><input type="radio" name="browser" value="airfield" onclick="searchImages(this.value)">airfield</td>
+                <td><input type="radio" name="browser" value="airplane cabin" onclick="searchImages(this.value)">airplane cabin</td>
+                <td><input type="radio" name="browser" value="airport terminal" onclick="searchImages(this.value)">airport terminal</td>
+                <td><input type="radio" name="browser" value="alcove" onclick="searchImages(this.value)">alcove</td>
+                <td><input type="radio" name="browser" value="alley" onclick="searchImages(this.value)">alley</td>
+                <td><input type="radio" name="browser" value="amphitheater" onclick="searchImages(this.value)">amphitheater</td>
+                <td><input type="radio" name="browser" value="amusement arcade" onclick="searchImages(this.value)">amusement arcade</td>
+                <td><input type="radio" name="browser" value="amusement park" onclick="searchImages(this.value)">amusement park</td>
+                <td><input type="radio" name="browser" value="apartment building outdoor" onclick="searchImages(this.value)">apartment building outdoor</td>
+                <td><input type="radio" name="browser" value="aquarium" onclick="searchImages(this.value)">aquarium</td>
+                <td><input type="radio" name="browser" value="aqueduct" onclick="searchImages(this.value)">aqueduct</td>
+                <td><input type="radio" name="browser" value="arcade" onclick="searchImages(this.value)">arcade</td>
+                <td><input type="radio" name="browser" value="arch" onclick="searchImages(this.value)">arch</td>
+                <td><input type="radio" name="browser" value="archaelogical excavation" onclick="searchImages(this.value)">archaelogical excavation</td>
+                <td><input type="radio" name="browser" value="archive" onclick="searchImages(this.value)">archive</td>
+                <td><input type="radio" name="browser" value="arena hockey" onclick="searchImages(this.value)">arena hockey</td>
+                <td><input type="radio" name="browser" value="arena performance" onclick="searchImages(this.value)">arena performance</td>
+                <td><input type="radio" name="browser" value="arena rodeo" onclick="searchImages(this.value)">arena rodeo</td>
+                <td><input type="radio" name="browser" value="army base" onclick="searchImages(this.value)">army base</td>
+                <td><input type="radio" name="browser" value="art gallery" onclick="searchImages(this.value)">art gallery</td>
+                <td><input type="radio" name="browser" value="art school" onclick="searchImages(this.value)">art school</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="art studio" onclick="searchImages(this.value)">art studio</td>
+                <td><input type="radio" name="browser" value="artists loft" onclick="searchImages(this.value)">artists loft</td>
+                <td><input type="radio" name="browser" value="assembly line" onclick="searchImages(this.value)">assembly line</td>
+                <td><input type="radio" name="browser" value="athletic field outdoor" onclick="searchImages(this.value)">athletic field outdoor</td>
+                <td><input type="radio" name="browser" value="atrium public" onclick="searchImages(this.value)">atrium public</td>
+                <td><input type="radio" name="browser" value="attic" onclick="searchImages(this.value)">attic</td>
+                <td><input type="radio" name="browser" value="auditorium" onclick="searchImages(this.value)">auditorium</td>
+                <td><input type="radio" name="browser" value="auto factory" onclick="searchImages(this.value)">auto factory</td>
+                <td><input type="radio" name="browser" value="auto showroom" onclick="searchImages(this.value)">auto showroom</td>
+                <td><input type="radio" name="browser" value="badlands" onclick="searchImages(this.value)">badlands</td>
+                <td><input type="radio" name="browser" value="bakery shop" onclick="searchImages(this.value)">bakery shop</td>
+                <td><input type="radio" name="browser" value="balcony exterior" onclick="searchImages(this.value)">balcony exterior</td>
+                <td><input type="radio" name="browser" value="balcony interior" onclick="searchImages(this.value)">balcony interior</td>
+                <td><input type="radio" name="browser" value="ball pit" onclick="searchImages(this.value)">ball pit</td>
+                <td><input type="radio" name="browser" value="ballroom" onclick="searchImages(this.value)">ballroom</td>
+                <td><input type="radio" name="browser" value="bamboo forest" onclick="searchImages(this.value)">bamboo forest</td>
+                <td><input type="radio" name="browser" value="bank vault" onclick="searchImages(this.value)">bank vault</td>
+                <td><input type="radio" name="browser" value="banquet hall" onclick="searchImages(this.value)">banquet hall</td>
+                <td><input type="radio" name="browser" value="bar" onclick="searchImages(this.value)">bar</td>
+                <td><input type="radio" name="browser" value="barn" onclick="searchImages(this.value)">barn</td>
+                <td><input type="radio" name="browser" value="barndoor" onclick="searchImages(this.value)">barndoor</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="baseball field" onclick="searchImages(this.value)">baseball field</td>
+                <td><input type="radio" name="browser" value="basement" onclick="searchImages(this.value)">basement</td>
+                <td><input type="radio" name="browser" value="basketball court indoor" onclick="searchImages(this.value)">basketball court indoor</td>
+                <td><input type="radio" name="browser" value="bathroom" onclick="searchImages(this.value)">bathroom</td>
+                <td><input type="radio" name="browser" value="bazaar indoor" onclick="searchImages(this.value)">bazaar indoor</td>
+                <td><input type="radio" name="browser" value="bazaar outdoor" onclick="searchImages(this.value)">bazaar outdoor</td>
+                <td><input type="radio" name="browser" value="beach" onclick="searchImages(this.value)">beach</td>
+                <td><input type="radio" name="browser" value="beach house" onclick="searchImages(this.value)">beach house</td>
+                <td><input type="radio" name="browser" value="beauty salon" onclick="searchImages(this.value)">beauty salon</td>
+                <td><input type="radio" name="browser" value="bedchamber" onclick="searchImages(this.value)">bedchamber</td>
+                <td><input type="radio" name="browser" value="bedroom" onclick="searchImages(this.value)">bedroom</td>
+                <td><input type="radio" name="browser" value="beer garden" onclick="searchImages(this.value)">beer garden</td>
+                <td><input type="radio" name="browser" value="beer hall" onclick="searchImages(this.value)">beer hall</td>
+                <td><input type="radio" name="browser" value="berth" onclick="searchImages(this.value)">berth</td>
+                <td><input type="radio" name="browser" value="biology laboratory" onclick="searchImages(this.value)">biology laboratory</td>
+                <td><input type="radio" name="browser" value="boardwalk" onclick="searchImages(this.value)">boardwalk</td>
+                <td><input type="radio" name="browser" value="boat deck" onclick="searchImages(this.value)">boat deck</td>
+                <td><input type="radio" name="browser" value="boathouse" onclick="searchImages(this.value)">boathouse</td>
+                <td><input type="radio" name="browser" value="bookstore" onclick="searchImages(this.value)">bookstore</td>
+                <td><input type="radio" name="browser" value="booth indoor" onclick="searchImages(this.value)">booth indoor</td>
+                <td><input type="radio" name="browser" value="botanical garden" onclick="searchImages(this.value)">botanical garden</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="bow window indoor" onclick="searchImages(this.value)">bow window indoor</td>
+                <td><input type="radio" name="browser" value="bowling alley" onclick="searchImages(this.value)">bowling alley</td>
+                <td><input type="radio" name="browser" value="boxing ring" onclick="searchImages(this.value)">boxing ring</td>
+                <td><input type="radio" name="browser" value="bridge" onclick="searchImages(this.value)">bridge</td>
+                <td><input type="radio" name="browser" value="building facade" onclick="searchImages(this.value)">building facade</td>
+                <td><input type="radio" name="browser" value="bullring" onclick="searchImages(this.value)">bullring</td>
+                <td><input type="radio" name="browser" value="burial chamber" onclick="searchImages(this.value)">burial chamber</td>
+                <td><input type="radio" name="browser" value="bus interior" onclick="searchImages(this.value)">bus interior</td>
+                <td><input type="radio" name="browser" value="bus station indoor" onclick="searchImages(this.value)">bus station indoor</td>
+                <td><input type="radio" name="browser" value="butchers shop" onclick="searchImages(this.value)">butchers shop</td>
+                <td><input type="radio" name="browser" value="butte" onclick="searchImages(this.value)">butte</td>
+                <td><input type="radio" name="browser" value="cabin outdoor" onclick="searchImages(this.value)">cabin outdoor</td>
+                <td><input type="radio" name="browser" value="cafeteria" onclick="searchImages(this.value)">cafeteria</td>
+                <td><input type="radio" name="browser" value="campsite" onclick="searchImages(this.value)">campsite</td>
+                <td><input type="radio" name="browser" value="campus" onclick="searchImages(this.value)">campus</td>
+                <td><input type="radio" name="browser" value="canal natural" onclick="searchImages(this.value)">canal natural</td>
+                <td><input type="radio" name="browser" value="canal urban" onclick="searchImages(this.value)">canal urban</td>
+                <td><input type="radio" name="browser" value="candy store" onclick="searchImages(this.value)">candy store</td>
+                <td><input type="radio" name="browser" value="canyon" onclick="searchImages(this.value)">canyon</td>
+                <td><input type="radio" name="browser" value="car interior" onclick="searchImages(this.value)">car interior</td>
+                <td><input type="radio" name="browser" value="carrousel" onclick="searchImages(this.value)">carrousel</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="castle" onclick="searchImages(this.value)">castle</td>
+                <td><input type="radio" name="browser" value="catacomb" onclick="searchImages(this.value)">catacomb</td>
+                <td><input type="radio" name="browser" value="cemetery" onclick="searchImages(this.value)">cemetery</td>
+                <td><input type="radio" name="browser" value="chalet" onclick="searchImages(this.value)">chalet</td>
+                <td><input type="radio" name="browser" value="chemistry lab" onclick="searchImages(this.value)">chemistry lab</td>
+                <td><input type="radio" name="browser" value="childs room" onclick="searchImages(this.value)">childs room</td>
+                <td><input type="radio" name="browser" value="church indoor" onclick="searchImages(this.value)">church indoor</td>
+                <td><input type="radio" name="browser" value="church outdoor" onclick="searchImages(this.value)">church outdoor</td>
+                <td><input type="radio" name="browser" value="classroom" onclick="searchImages(this.value)">classroom</td>
+                <td><input type="radio" name="browser" value="clean room" onclick="searchImages(this.value)">clean room</td>
+                <td><input type="radio" name="browser" value="cliff" onclick="searchImages(this.value)">cliff</td>
+                <td><input type="radio" name="browser" value="closet" onclick="searchImages(this.value)">closet</td>
+                <td><input type="radio" name="browser" value="clothing store" onclick="searchImages(this.value)">clothing store</td>
+                <td><input type="radio" name="browser" value="coast" onclick="searchImages(this.value)">coast</td>
+                <td><input type="radio" name="browser" value="cockpit" onclick="searchImages(this.value)">cockpit</td>
+                <td><input type="radio" name="browser" value="coffee shop" onclick="searchImages(this.value)">coffee shop</td>
+                <td><input type="radio" name="browser" value="computer room" onclick="searchImages(this.value)">computer room</td>
+                <td><input type="radio" name="browser" value="conference center" onclick="searchImages(this.value)">conference center</td>
+                <td><input type="radio" name="browser" value="conference room" onclick="searchImages(this.value)">conference room</td>
+                <td><input type="radio" name="browser" value="construction site" onclick="searchImages(this.value)">construction site</td>
+                <td><input type="radio" name="browser" value="corn field" onclick="searchImages(this.value)">corn field</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="corral" onclick="searchImages(this.value)">corral</td>
+                <td><input type="radio" name="browser" value="corridor" onclick="searchImages(this.value)">corridor</td>
+                <td><input type="radio" name="browser" value="cottage" onclick="searchImages(this.value)">cottage</td>
+                <td><input type="radio" name="browser" value="courthouse" onclick="searchImages(this.value)">courthouse</td>
+                <td><input type="radio" name="browser" value="courtyard" onclick="searchImages(this.value)">courtyard</td>
+                <td><input type="radio" name="browser" value="creek" onclick="searchImages(this.value)">creek</td>
+                <td><input type="radio" name="browser" value="crevasse" onclick="searchImages(this.value)">crevasse</td>
+                <td><input type="radio" name="browser" value="crosswalk" onclick="searchImages(this.value)">crosswalk</td>
+                <td><input type="radio" name="browser" value="dam" onclick="searchImages(this.value)">dam</td>
+                <td><input type="radio" name="browser" value="delicatessen" onclick="searchImages(this.value)">delicatessen</td>
+                <td><input type="radio" name="browser" value="department store" onclick="searchImages(this.value)">department store</td>
+                <td><input type="radio" name="browser" value="desert road" onclick="searchImages(this.value)">desert road</td>
+                <td><input type="radio" name="browser" value="desert sand" onclick="searchImages(this.value)">desert sand</td>
+                <td><input type="radio" name="browser" value="desert vegetation" onclick="searchImages(this.value)">desert vegetation</td>
+                <td><input type="radio" name="browser" value="diner outdoor" onclick="searchImages(this.value)">diner outdoor</td>
+                <td><input type="radio" name="browser" value="dining hall" onclick="searchImages(this.value)">dining hall</td>
+                <td><input type="radio" name="browser" value="dining room" onclick="searchImages(this.value)">dining room</td>
+                <td><input type="radio" name="browser" value="discotheque" onclick="searchImages(this.value)">discotheque</td>
+                <td><input type="radio" name="browser" value="doorway outdoor" onclick="searchImages(this.value)">doorway outdoor</td>
+                <td><input type="radio" name="browser" value="dorm room" onclick="searchImages(this.value)">dorm room</td>
+                <td><input type="radio" name="browser" value="downtown" onclick="searchImages(this.value)">downtown</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="dressing room" onclick="searchImages(this.value)">dressing room</td>
+                <td><input type="radio" name="browser" value="driveway" onclick="searchImages(this.value)">driveway</td>
+                <td><input type="radio" name="browser" value="drugstore" onclick="searchImages(this.value)">drugstore</td>
+                <td><input type="radio" name="browser" value="elevator door" onclick="searchImages(this.value)">elevator door</td>
+                <td><input type="radio" name="browser" value="elevator lobby" onclick="searchImages(this.value)">elevator lobby</td>
+                <td><input type="radio" name="browser" value="elevator shaft" onclick="searchImages(this.value)">elevator shaft</td>
+                <td><input type="radio" name="browser" value="embassy" onclick="searchImages(this.value)">embassy</td>
+                <td><input type="radio" name="browser" value="engine room" onclick="searchImages(this.value)">engine room</td>
+                <td><input type="radio" name="browser" value="entrance hall" onclick="searchImages(this.value)">entrance hall</td>
+                <td><input type="radio" name="browser" value="escalator indoor" onclick="searchImages(this.value)">escalator indoor</td>
+                <td><input type="radio" name="browser" value="excavation" onclick="searchImages(this.value)">excavation</td>
+                <td><input type="radio" name="browser" value="fabric store" onclick="searchImages(this.value)">fabric store</td>
+                <td><input type="radio" name="browser" value="farm" onclick="searchImages(this.value)">farm</td>
+                <td><input type="radio" name="browser" value="fastfood restaurant" onclick="searchImages(this.value)">fastfood restaurant</td>
+                <td><input type="radio" name="browser" value="field cultivated" onclick="searchImages(this.value)">field cultivated</td>
+                <td><input type="radio" name="browser" value="field road" onclick="searchImages(this.value)">field road</td>
+                <td><input type="radio" name="browser" value="field wild" onclick="searchImages(this.value)">field wild</td>
+                <td><input type="radio" name="browser" value="fire escape" onclick="searchImages(this.value)">fire escape</td>
+                <td><input type="radio" name="browser" value="fire station" onclick="searchImages(this.value)">fire station</td>
+                <td><input type="radio" name="browser" value="fishpond" onclick="searchImages(this.value)">fishpond</td>
+                <td><input type="radio" name="browser" value="flea market indoor" onclick="searchImages(this.value)">flea market indoor</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="florist shop indoor" onclick="searchImages(this.value)">florist shop indoor</td>
+                <td><input type="radio" name="browser" value="food court" onclick="searchImages(this.value)">food court</td>
+                <td><input type="radio" name="browser" value="football field" onclick="searchImages(this.value)">football field</td>
+                <td><input type="radio" name="browser" value="forest broadleaf" onclick="searchImages(this.value)">forest broadleaf</td>
+                <td><input type="radio" name="browser" value="forest path" onclick="searchImages(this.value)">forest path</td>
+                <td><input type="radio" name="browser" value="forest road" onclick="searchImages(this.value)">forest road</td>
+                <td><input type="radio" name="browser" value="formal garden" onclick="searchImages(this.value)">formal garden</td>
+                <td><input type="radio" name="browser" value="fountain" onclick="searchImages(this.value)">fountain</td>
+                <td><input type="radio" name="browser" value="galley" onclick="searchImages(this.value)">galley</td>
+                <td><input type="radio" name="browser" value="garage indoor" onclick="searchImages(this.value)">garage indoor</td>
+                <td><input type="radio" name="browser" value="garage outdoor" onclick="searchImages(this.value)">garage outdoor</td>
+                <td><input type="radio" name="browser" value="gas station" onclick="searchImages(this.value)">gas station</td>
+                <td><input type="radio" name="browser" value="gazebo exterior" onclick="searchImages(this.value)">gazebo exterior</td>
+                <td><input type="radio" name="browser" value="general store indoor" onclick="searchImages(this.value)">general store indoor</td>
+                <td><input type="radio" name="browser" value="general store outdoor" onclick="searchImages(this.value)">general store outdoor</td>
+                <td><input type="radio" name="browser" value="gift shop" onclick="searchImages(this.value)">gift shop</td>
+                <td><input type="radio" name="browser" value="glacier" onclick="searchImages(this.value)">glacier</td>
+                <td><input type="radio" name="browser" value="golf course" onclick="searchImages(this.value)">golf course</td>
+                <td><input type="radio" name="browser" value="greenhouse indoor" onclick="searchImages(this.value)">greenhouse indoor</td>
+                <td><input type="radio" name="browser" value="greenhouse outdoor" onclick="searchImages(this.value)">greenhouse outdoor</td>
+                <td><input type="radio" name="browser" value="grotto" onclick="searchImages(this.value)">grotto</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="gymnasium indoor" onclick="searchImages(this.value)">gymnasium indoor</td>
+                <td><input type="radio" name="browser" value="hangar indoor" onclick="searchImages(this.value)">hangar indoor</td>
+                <td><input type="radio" name="browser" value="hangar outdoor" onclick="searchImages(this.value)">hangar outdoor</td>
+                <td><input type="radio" name="browser" value="harbor" onclick="searchImages(this.value)">harbor</td>
+                <td><input type="radio" name="browser" value="hardware store" onclick="searchImages(this.value)">hardware store</td>
+                <td><input type="radio" name="browser" value="hayfield" onclick="searchImages(this.value)">hayfield</td>
+                <td><input type="radio" name="browser" value="heliport" onclick="searchImages(this.value)">heliport</td>
+                <td><input type="radio" name="browser" value="highway" onclick="searchImages(this.value)">highway</td>
+                <td><input type="radio" name="browser" value="home office" onclick="searchImages(this.value)">home office</td>
+                <td><input type="radio" name="browser" value="home theater" onclick="searchImages(this.value)">home theater</td>
+                <td><input type="radio" name="browser" value="hospital" onclick="searchImages(this.value)">hospital</td>
+                <td><input type="radio" name="browser" value="hospital room" onclick="searchImages(this.value)">hospital room</td>
+                <td><input type="radio" name="browser" value="hot spring" onclick="searchImages(this.value)">hot spring</td>
+                <td><input type="radio" name="browser" value="hotel outdoor" onclick="searchImages(this.value)">hotel outdoor</td>
+                <td><input type="radio" name="browser" value="hotel room" onclick="searchImages(this.value)">hotel room</td>
+                <td><input type="radio" name="browser" value="house" onclick="searchImages(this.value)">house</td>
+                <td><input type="radio" name="browser" value="hunting lodge outdoor" onclick="searchImages(this.value)">hunting lodge outdoor</td>
+                <td><input type="radio" name="browser" value="ice cream parlor" onclick="searchImages(this.value)">ice cream parlor</td>
+                <td><input type="radio" name="browser" value="ice floe" onclick="searchImages(this.value)">ice floe</td>
+                <td><input type="radio" name="browser" value="ice shelf" onclick="searchImages(this.value)">ice shelf</td>
+                <td><input type="radio" name="browser" value="ice skating rink indoor" onclick="searchImages(this.value)">ice skating rink indoor</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="ice skating rink outdoor" onclick="searchImages(this.value)">ice skating rink outdoor</td>
+                <td><input type="radio" name="browser" value="iceberg" onclick="searchImages(this.value)">iceberg</td>
+                <td><input type="radio" name="browser" value="igloo" onclick="searchImages(this.value)">igloo</td>
+                <td><input type="radio" name="browser" value="industrial area" onclick="searchImages(this.value)">industrial area</td>
+                <td><input type="radio" name="browser" value="inn outdoor" onclick="searchImages(this.value)">inn outdoor</td>
+                <td><input type="radio" name="browser" value="islet" onclick="searchImages(this.value)">islet</td>
+                <td><input type="radio" name="browser" value="jacuzzi indoor" onclick="searchImages(this.value)">jacuzzi indoor</td>
+                <td><input type="radio" name="browser" value="jail cell" onclick="searchImages(this.value)">jail cell</td>
+                <td><input type="radio" name="browser" value="japanese garden" onclick="searchImages(this.value)">japanese garden</td>
+                <td><input type="radio" name="browser" value="jewelry shop" onclick="searchImages(this.value)">jewelry shop</td>
+                <td><input type="radio" name="browser" value="junkyard" onclick="searchImages(this.value)">junkyard</td>
+                <td><input type="radio" name="browser" value="kasbah" onclick="searchImages(this.value)">kasbah</td>
+                <td><input type="radio" name="browser" value="kennel outdoor" onclick="searchImages(this.value)">kennel outdoor</td>
+                <td><input type="radio" name="browser" value="kindergarden classroom" onclick="searchImages(this.value)">kindergarden classroom</td>
+                <td><input type="radio" name="browser" value="kitchen" onclick="searchImages(this.value)">kitchen</td>
+                <td><input type="radio" name="browser" value="lagoon" onclick="searchImages(this.value)">lagoon</td>
+                <td><input type="radio" name="browser" value="lake natural" onclick="searchImages(this.value)">lake natural</td>
+                <td><input type="radio" name="browser" value="landfill" onclick="searchImages(this.value)">landfill</td>
+                <td><input type="radio" name="browser" value="landing deck" onclick="searchImages(this.value)">landing deck</td>
+                <td><input type="radio" name="browser" value="laundromat" onclick="searchImages(this.value)">laundromat</td>
+                <td><input type="radio" name="browser" value="lawn" onclick="searchImages(this.value)">lawn</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="lecture room" onclick="searchImages(this.value)">lecture room</td>
+                <td><input type="radio" name="browser" value="legislative chamber" onclick="searchImages(this.value)">legislative chamber</td>
+                <td><input type="radio" name="browser" value="library indoor" onclick="searchImages(this.value)">library indoor</td>
+                <td><input type="radio" name="browser" value="library outdoor" onclick="searchImages(this.value)">library outdoor</td>
+                <td><input type="radio" name="browser" value="lighthouse" onclick="searchImages(this.value)">lighthouse</td>
+                <td><input type="radio" name="browser" value="living room" onclick="searchImages(this.value)">living room</td>
+                <td><input type="radio" name="browser" value="loading dock" onclick="searchImages(this.value)">loading dock</td>
+                <td><input type="radio" name="browser" value="lobby" onclick="searchImages(this.value)">lobby</td>
+                <td><input type="radio" name="browser" value="lock chamber" onclick="searchImages(this.value)">lock chamber</td>
+                <td><input type="radio" name="browser" value="locker room" onclick="searchImages(this.value)">locker room</td>
+                <td><input type="radio" name="browser" value="mansion" onclick="searchImages(this.value)">mansion</td>
+                <td><input type="radio" name="browser" value="manufactured home" onclick="searchImages(this.value)">manufactured home</td>
+                <td><input type="radio" name="browser" value="market indoor" onclick="searchImages(this.value)">market indoor</td>
+                <td><input type="radio" name="browser" value="market outdoor" onclick="searchImages(this.value)">market outdoor</td>
+                <td><input type="radio" name="browser" value="marsh" onclick="searchImages(this.value)">marsh</td>
+                <td><input type="radio" name="browser" value="martial arts gym" onclick="searchImages(this.value)">martial arts gym</td>
+                <td><input type="radio" name="browser" value="mausoleum" onclick="searchImages(this.value)">mausoleum</td>
+                <td><input type="radio" name="browser" value="medina" onclick="searchImages(this.value)">medina</td>
+                <td><input type="radio" name="browser" value="mezzanine" onclick="searchImages(this.value)">mezzanine</td>
+                <td><input type="radio" name="browser" value="moat water" onclick="searchImages(this.value)">moat water</td>
+                <td><input type="radio" name="browser" value="mosque outdoor" onclick="searchImages(this.value)">mosque outdoor</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="motel" onclick="searchImages(this.value)">motel</td>
+                <td><input type="radio" name="browser" value="mountain" onclick="searchImages(this.value)">mountain</td>
+                <td><input type="radio" name="browser" value="mountain path" onclick="searchImages(this.value)">mountain path</td>
+                <td><input type="radio" name="browser" value="mountain snowy" onclick="searchImages(this.value)">mountain snowy</td>
+                <td><input type="radio" name="browser" value="movie theater indoor" onclick="searchImages(this.value)">movie theater indoor</td>
+                <td><input type="radio" name="browser" value="museum indoor" onclick="searchImages(this.value)">museum indoor</td>
+                <td><input type="radio" name="browser" value="museum outdoor" onclick="searchImages(this.value)">museum outdoor</td>
+                <td><input type="radio" name="browser" value="music studio" onclick="searchImages(this.value)">music studio</td>
+                <td><input type="radio" name="browser" value="natural history museum" onclick="searchImages(this.value)">natural history museum</td>
+                <td><input type="radio" name="browser" value="nursery" onclick="searchImages(this.value)">nursery</td>
+                <td><input type="radio" name="browser" value="nursing home" onclick="searchImages(this.value)">nursing home</td>
+                <td><input type="radio" name="browser" value="oast house" onclick="searchImages(this.value)">oast house</td>
+                <td><input type="radio" name="browser" value="ocean" onclick="searchImages(this.value)">ocean</td>
+                <td><input type="radio" name="browser" value="office" onclick="searchImages(this.value)">office</td>
+                <td><input type="radio" name="browser" value="office building" onclick="searchImages(this.value)">office building</td>
+                <td><input type="radio" name="browser" value="office cubicles" onclick="searchImages(this.value)">office cubicles</td>
+                <td><input type="radio" name="browser" value="oilrig" onclick="searchImages(this.value)">oilrig</td>
+                <td><input type="radio" name="browser" value="operating room" onclick="searchImages(this.value)">operating room</td>
+                <td><input type="radio" name="browser" value="orchard" onclick="searchImages(this.value)">orchard</td>
+                <td><input type="radio" name="browser" value="orchestra pit" onclick="searchImages(this.value)">orchestra pit</td>
+                <td><input type="radio" name="browser" value="pagoda" onclick="searchImages(this.value)">pagoda</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="palace" onclick="searchImages(this.value)">palace</td>
+                <td><input type="radio" name="browser" value="pantry" onclick="searchImages(this.value)">pantry</td>
+                <td><input type="radio" name="browser" value="park" onclick="searchImages(this.value)">park</td>
+                <td><input type="radio" name="browser" value="parking garage indoor" onclick="searchImages(this.value)">parking garage indoor</td>
+                <td><input type="radio" name="browser" value="parking garage outdoor" onclick="searchImages(this.value)">parking garage outdoor</td>
+                <td><input type="radio" name="browser" value="parking lot" onclick="searchImages(this.value)">parking lot</td>
+                <td><input type="radio" name="browser" value="pasture" onclick="searchImages(this.value)">pasture</td>
+                <td><input type="radio" name="browser" value="patio" onclick="searchImages(this.value)">patio</td>
+                <td><input type="radio" name="browser" value="pavilion" onclick="searchImages(this.value)">pavilion</td>
+                <td><input type="radio" name="browser" value="pet shop" onclick="searchImages(this.value)">pet shop</td>
+                <td><input type="radio" name="browser" value="pharmacy" onclick="searchImages(this.value)">pharmacy</td>
+                <td><input type="radio" name="browser" value="phone booth" onclick="searchImages(this.value)">phone booth</td>
+                <td><input type="radio" name="browser" value="physics laboratory" onclick="searchImages(this.value)">physics laboratory</td>
+                <td><input type="radio" name="browser" value="picnic area" onclick="searchImages(this.value)">picnic area</td>
+                <td><input type="radio" name="browser" value="pier" onclick="searchImages(this.value)">pier</td>
+                <td><input type="radio" name="browser" value="pizzeria" onclick="searchImages(this.value)">pizzeria</td>
+                <td><input type="radio" name="browser" value="playground" onclick="searchImages(this.value)">playground</td>
+                <td><input type="radio" name="browser" value="playroom" onclick="searchImages(this.value)">playroom</td>
+                <td><input type="radio" name="browser" value="plaza" onclick="searchImages(this.value)">plaza</td>
+                <td><input type="radio" name="browser" value="pond" onclick="searchImages(this.value)">pond</td>
+                <td><input type="radio" name="browser" value="porch" onclick="searchImages(this.value)">porch</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="promenade" onclick="searchImages(this.value)">promenade</td>
+                <td><input type="radio" name="browser" value="pub indoor" onclick="searchImages(this.value)">pub indoor</td>
+                <td><input type="radio" name="browser" value="racecourse" onclick="searchImages(this.value)">racecourse</td>
+                <td><input type="radio" name="browser" value="raceway" onclick="searchImages(this.value)">raceway</td>
+                <td><input type="radio" name="browser" value="raft" onclick="searchImages(this.value)">raft</td>
+                <td><input type="radio" name="browser" value="railroad track" onclick="searchImages(this.value)">railroad track</td>
+                <td><input type="radio" name="browser" value="rainforest" onclick="searchImages(this.value)">rainforest</td>
+                <td><input type="radio" name="browser" value="reception" onclick="searchImages(this.value)">reception</td>
+                <td><input type="radio" name="browser" value="recreation room" onclick="searchImages(this.value)">recreation room</td>
+                <td><input type="radio" name="browser" value="repair shop" onclick="searchImages(this.value)">repair shop</td>
+                <td><input type="radio" name="browser" value="residential neighborhood" onclick="searchImages(this.value)">residential neighborhood</td>
+                <td><input type="radio" name="browser" value="restaurant" onclick="searchImages(this.value)">restaurant</td>
+                <td><input type="radio" name="browser" value="restaurant kitchen" onclick="searchImages(this.value)">restaurant kitchen</td>
+                <td><input type="radio" name="browser" value="restaurant patio" onclick="searchImages(this.value)">restaurant patio</td>
+                <td><input type="radio" name="browser" value="rice paddy" onclick="searchImages(this.value)">rice paddy</td>
+                <td><input type="radio" name="browser" value="river" onclick="searchImages(this.value)">river</td>
+                <td><input type="radio" name="browser" value="rock arch" onclick="searchImages(this.value)">rock arch</td>
+                <td><input type="radio" name="browser" value="roof garden" onclick="searchImages(this.value)">roof garden</td>
+                <td><input type="radio" name="browser" value="rope bridge" onclick="searchImages(this.value)">rope bridge</td>
+                <td><input type="radio" name="browser" value="ruin" onclick="searchImages(this.value)">ruin</td>
+                <td><input type="radio" name="browser" value="runway" onclick="searchImages(this.value)">runway</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="sandbox" onclick="searchImages(this.value)">sandbox</td>
+                <td><input type="radio" name="browser" value="sauna" onclick="searchImages(this.value)">sauna</td>
+                <td><input type="radio" name="browser" value="schoolhouse" onclick="searchImages(this.value)">schoolhouse</td>
+                <td><input type="radio" name="browser" value="science museum" onclick="searchImages(this.value)">science museum</td>
+                <td><input type="radio" name="browser" value="server room" onclick="searchImages(this.value)">server room</td>
+                <td><input type="radio" name="browser" value="shed" onclick="searchImages(this.value)">shed</td>
+                <td><input type="radio" name="browser" value="shoe shop" onclick="searchImages(this.value)">shoe shop</td>
+                <td><input type="radio" name="browser" value="shopfront" onclick="searchImages(this.value)">shopfront</td>
+                <td><input type="radio" name="browser" value="shopping mall indoor" onclick="searchImages(this.value)">shopping mall indoor</td>
+                <td><input type="radio" name="browser" value="shower" onclick="searchImages(this.value)">shower</td>
+                <td><input type="radio" name="browser" value="ski resort" onclick="searchImages(this.value)">ski resort</td>
+                <td><input type="radio" name="browser" value="ski slope" onclick="searchImages(this.value)">ski slope</td>
+                <td><input type="radio" name="browser" value="sky" onclick="searchImages(this.value)">sky</td>
+                <td><input type="radio" name="browser" value="skyscraper" onclick="searchImages(this.value)">skyscraper</td>
+                <td><input type="radio" name="browser" value="slum" onclick="searchImages(this.value)">slum</td>
+                <td><input type="radio" name="browser" value="snowfield" onclick="searchImages(this.value)">snowfield</td>
+                <td><input type="radio" name="browser" value="soccer field" onclick="searchImages(this.value)">soccer field</td>
+                <td><input type="radio" name="browser" value="stable" onclick="searchImages(this.value)">stable</td>
+                <td><input type="radio" name="browser" value="stadium baseball" onclick="searchImages(this.value)">stadium baseball</td>
+                <td><input type="radio" name="browser" value="stadium football" onclick="searchImages(this.value)">stadium football</td>
+                <td><input type="radio" name="browser" value="stadium soccer" onclick="searchImages(this.value)">stadium soccer</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="stage indoor" onclick="searchImages(this.value)">stage indoor</td>
+                <td><input type="radio" name="browser" value="stage outdoor" onclick="searchImages(this.value)">stage outdoor</td>
+                <td><input type="radio" name="browser" value="staircase" onclick="searchImages(this.value)">staircase</td>
+                <td><input type="radio" name="browser" value="storage room" onclick="searchImages(this.value)">storage room</td>
+                <td><input type="radio" name="browser" value="street" onclick="searchImages(this.value)">street</td>
+                <td><input type="radio" name="browser" value="subway station platform" onclick="searchImages(this.value)">subway station platform</td>
+                <td><input type="radio" name="browser" value="supermarket" onclick="searchImages(this.value)">supermarket</td>
+                <td><input type="radio" name="browser" value="sushi bar" onclick="searchImages(this.value)">sushi bar</td>
+                <td><input type="radio" name="browser" value="swamp" onclick="searchImages(this.value)">swamp</td>
+                <td><input type="radio" name="browser" value="swimming hole" onclick="searchImages(this.value)">swimming hole</td>
+                <td><input type="radio" name="browser" value="swimming pool indoor" onclick="searchImages(this.value)">swimming pool indoor</td>
+                <td><input type="radio" name="browser" value="swimming pool outdoor" onclick="searchImages(this.value)">swimming pool outdoor</td>
+                <td><input type="radio" name="browser" value="synagogue outdoor" onclick="searchImages(this.value)">synagogue outdoor</td>
+                <td><input type="radio" name="browser" value="television room" onclick="searchImages(this.value)">television room</td>
+                <td><input type="radio" name="browser" value="television studio" onclick="searchImages(this.value)">television studio</td>
+                <td><input type="radio" name="browser" value="temple asia" onclick="searchImages(this.value)">temple asia</td>
+                <td><input type="radio" name="browser" value="throne room" onclick="searchImages(this.value)">throne room</td>
+                <td><input type="radio" name="browser" value="ticket booth" onclick="searchImages(this.value)">ticket booth</td>
+                <td><input type="radio" name="browser" value="topiary garden" onclick="searchImages(this.value)">topiary garden</td>
+                <td><input type="radio" name="browser" value="tower" onclick="searchImages(this.value)">tower</td>
+                <td><input type="radio" name="browser" value="toyshop" onclick="searchImages(this.value)">toyshop</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="train interior" onclick="searchImages(this.value)">train interior</td>
+                <td><input type="radio" name="browser" value="train station platform" onclick="searchImages(this.value)">train station platform</td>
+                <td><input type="radio" name="browser" value="tree farm" onclick="searchImages(this.value)">tree farm</td>
+                <td><input type="radio" name="browser" value="tree house" onclick="searchImages(this.value)">tree house</td>
+                <td><input type="radio" name="browser" value="trench" onclick="searchImages(this.value)">trench</td>
+                <td><input type="radio" name="browser" value="tundra" onclick="searchImages(this.value)">tundra</td>
+                <td><input type="radio" name="browser" value="underwater ocean deep" onclick="searchImages(this.value)">underwater ocean deep</td>
+                <td><input type="radio" name="browser" value="utility room" onclick="searchImages(this.value)">utility room</td>
+                <td><input type="radio" name="browser" value="valley" onclick="searchImages(this.value)">valley</td>
+                <td><input type="radio" name="browser" value="vegetable garden" onclick="searchImages(this.value)">vegetable garden</td>
+                <td><input type="radio" name="browser" value="veterinarians office" onclick="searchImages(this.value)">veterinarians office</td>
+                <td><input type="radio" name="browser" value="viaduct" onclick="searchImages(this.value)">viaduct</td>
+                <td><input type="radio" name="browser" value="village" onclick="searchImages(this.value)">village</td>
+                <td><input type="radio" name="browser" value="vineyard" onclick="searchImages(this.value)">vineyard</td>
+                <td><input type="radio" name="browser" value="volcano" onclick="searchImages(this.value)">volcano</td>
+                <td><input type="radio" name="browser" value="volleyball court outdoor" onclick="searchImages(this.value)">volleyball court outdoor</td>
+                <td><input type="radio" name="browser" value="waiting room" onclick="searchImages(this.value)">waiting room</td>
+                <td><input type="radio" name="browser" value="water park" onclick="searchImages(this.value)">water park</td>
+                <td><input type="radio" name="browser" value="water tower" onclick="searchImages(this.value)">water tower</td>
+                <td><input type="radio" name="browser" value="waterfall" onclick="searchImages(this.value)">waterfall</td>
+                <td><input type="radio" name="browser" value="watering hole" onclick="searchImages(this.value)">watering hole</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="browser" value="wave" onclick="searchImages(this.value)">wave</td>
+                <td><input type="radio" name="browser" value="wet bar" onclick="searchImages(this.value)">wet bar</td>
+                <td><input type="radio" name="browser" value="wheat field" onclick="searchImages(this.value)">wheat field</td>
+                <td><input type="radio" name="browser" value="wind farm" onclick="searchImages(this.value)">wind farm</td>
+                <td><input type="radio" name="browser" value="windmill" onclick="searchImages(this.value)">windmill</td>
+                <td><input type="radio" name="browser" value="yard" onclick="searchImages(this.value)">yard</td>
+                <td><input type="radio" name="browser" value="youth hostel" onclick="searchImages(this.value)">youth hostel</td>
+                <td><input type="radio" name="browser" value="zen garden" onclick="searchImages(this.value)">zen garden</td>
+
+            </tr>
+        </table>
+    </form>
+    </center>
+
+    <script>
+        var placesList = [
+        "airfield",
+        "airplane cabin",
+        "airport terminal",
+        "alcove",
+        "alley",
+        "amphitheater",
+        "amusement arcade",
+        "amusement park",
+        "apartment building outdoor",
+        "aquarium",
+        "aqueduct",
+        "arcade",
+        "arch",
+        "archaelogical excavation",
+        "archive",
+        "arena hockey",
+        "arena performance",
+        "arena rodeo",
+        "army base",
+        "art gallery",
+        "art school",
+        "art studio",
+        "artists loft",
+        "assembly line",
+        "athletic field outdoor",
+        "atrium public",
+        "attic",
+        "auditorium",
+        "auto factory",
+        "auto showroom",
+        "badlands",
+        "bakery shop",
+        "balcony exterior",
+        "balcony interior",
+        "ball pit",
+        "ballroom",
+        "bamboo forest",
+        "bank vault",
+        "banquet hall",
+        "bar",
+        "barn",
+        "barndoor",
+        "baseball field",
+        "basement",
+        "basketball court indoor",
+        "bathroom",
+        "bazaar indoor",
+        "bazaar outdoor",
+        "beach",
+        "beach house",
+        "beauty salon",
+        "bedchamber",
+        "bedroom",
+        "beer garden",
+        "beer hall",
+        "berth",
+        "biology laboratory",
+        "boardwalk",
+        "boat deck",
+        "boathouse",
+        "bookstore",
+        "booth indoor",
+        "botanical garden",
+        "bow window indoor",
+        "bowling alley",
+        "boxing ring",
+        "bridge",
+        "building facade",
+        "bullring",
+        "burial chamber",
+        "bus interior",
+        "bus station indoor",
+        "butchers shop",
+        "butte",
+        "cabin outdoor",
+        "cafeteria",
+        "campsite",
+        "campus",
+        "canal natural",
+        "canal urban",
+        "candy store",
+        "canyon",
+        "car interior",
+        "carrousel",
+        "castle",
+        "catacomb",
+        "cemetery",
+        "chalet",
+        "chemistry lab",
+        "childs room",
+        "church indoor",
+        "church outdoor",
+        "classroom",
+        "clean room",
+        "cliff",
+        "closet",
+        "clothing store",
+        "coast",
+        "cockpit",
+        "coffee shop",
+        "computer room",
+        "conference center",
+        "conference room",
+        "construction site",
+        "corn field",
+        "corral",
+        "corridor",
+        "cottage",
+        "courthouse",
+        "courtyard",
+        "creek",
+        "crevasse",
+        "crosswalk",
+        "dam",
+        "delicatessen",
+        "department store",
+        "desert road",
+        "desert sand",
+        "desert vegetation",
+        "diner outdoor",
+        "dining hall",
+        "dining room",
+        "discotheque",
+        "doorway outdoor",
+        "dorm room",
+        "downtown",
+        "dressing room",
+        "driveway",
+        "drugstore",
+        "elevator door",
+        "elevator lobby",
+        "elevator shaft",
+        "embassy",
+        "engine room",
+        "entrance hall",
+        "escalator indoor",
+        "excavation",
+        "fabric store",
+        "farm",
+        "fastfood restaurant",
+        "field cultivated",
+        "field road",
+        "field wild",
+        "fire escape",
+        "fire station",
+        "fishpond",
+        "flea market indoor",
+        "florist shop indoor",
+        "food court",
+        "football field",
+        "forest broadleaf",
+        "forest path",
+        "forest road",
+        "formal garden",
+        "fountain",
+        "galley",
+        "garage indoor",
+        "garage outdoor",
+        "gas station",
+        "gazebo exterior",
+        "general store indoor",
+        "general store outdoor",
+        "gift shop",
+        "glacier",
+        "golf course",
+        "greenhouse indoor",
+        "greenhouse outdoor",
+        "grotto",
+        "gymnasium indoor",
+        "hangar indoor",
+        "hangar outdoor",
+        "harbor",
+        "hardware store",
+        "hayfield",
+        "heliport",
+        "highway",
+        "home office",
+        "home theater",
+        "hospital",
+        "hospital room",
+        "hot spring",
+        "hotel outdoor",
+        "hotel room",
+        "house",
+        "hunting lodge outdoor",
+        "ice cream parlor",
+        "ice floe",
+        "ice shelf",
+        "ice skating rink indoor",
+        "ice skating rink outdoor",
+        "iceberg",
+        "igloo",
+        "industrial area",
+        "inn outdoor",
+        "islet",
+        "jacuzzi indoor",
+        "jail cell",
+        "japanese garden",
+        "jewelry shop",
+        "junkyard",
+        "kasbah",
+        "kennel outdoor",
+        "kindergarden classroom",
+        "kitchen",
+        "lagoon",
+        "lake natural",
+        "landfill",
+        "landing deck",
+        "laundromat",
+        "lawn",
+        "lecture room",
+        "legislative chamber",
+        "library indoor",
+        "library outdoor",
+        "lighthouse",
+        "living room",
+        "loading dock",
+        "lobby",
+        "lock chamber",
+        "locker room",
+        "mansion",
+        "manufactured home",
+        "market indoor",
+        "market outdoor",
+        "marsh",
+        "martial arts gym",
+        "mausoleum",
+        "medina",
+        "mezzanine",
+        "moat water",
+        "mosque outdoor",
+        "motel",
+        "mountain",
+        "mountain path",
+        "mountain snowy",
+        "movie theater indoor",
+        "museum indoor",
+        "museum outdoor",
+        "music studio",
+        "natural history museum",
+        "nursery",
+        "nursing home",
+        "oast house",
+        "ocean",
+        "office",
+        "office building",
+        "office cubicles",
+        "oilrig",
+        "operating room",
+        "orchard",
+        "orchestra pit",
+        "pagoda",
+        "palace",
+        "pantry",
+        "park",
+        "parking garage indoor",
+        "parking garage outdoor",
+        "parking lot",
+        "pasture",
+        "patio",
+        "pavilion",
+        "pet shop",
+        "pharmacy",
+        "phone booth",
+        "physics laboratory",
+        "picnic area",
+        "pier",
+        "pizzeria",
+        "playground",
+        "playroom",
+        "plaza",
+        "pond",
+        "porch",
+        "promenade",
+        "pub indoor",
+        "racecourse",
+        "raceway",
+        "raft",
+        "railroad track",
+        "rainforest",
+        "reception",
+        "recreation room",
+        "repair shop",
+        "residential neighborhood",
+        "restaurant",
+        "restaurant kitchen",
+        "restaurant patio",
+        "rice paddy",
+        "river",
+        "rock arch",
+        "roof garden",
+        "rope bridge",
+        "ruin",
+        "runway",
+        "sandbox",
+        "sauna",
+        "schoolhouse",
+        "science museum",
+        "server room",
+        "shed",
+        "shoe shop",
+        "shopfront",
+        "shopping mall indoor",
+        "shower",
+        "ski resort",
+        "ski slope",
+        "sky",
+        "skyscraper",
+        "slum",
+        "snowfield",
+        "soccer field",
+        "stable",
+        "stadium baseball",
+        "stadium football",
+        "stadium soccer",
+        "stage indoor",
+        "stage outdoor",
+        "staircase",
+        "storage room",
+        "street",
+        "subway station platform",
+        "supermarket",
+        "sushi bar",
+        "swamp",
+        "swimming hole",
+        "swimming pool indoor",
+        "swimming pool outdoor",
+        "synagogue outdoor",
+        "television room",
+        "television studio",
+        "temple asia",
+        "throne room",
+        "ticket booth",
+        "topiary garden",
+        "tower",
+        "toyshop",
+        "train interior",
+        "train station platform",
+        "tree farm",
+        "tree house",
+        "trench",
+        "tundra",
+        "underwater ocean deep",
+        "utility room",
+        "valley",
+        "vegetable garden",
+        "veterinarians office",
+        "viaduct",
+        "village",
+        "vineyard",
+        "volcano",
+        "volleyball court outdoor",
+        "waiting room",
+        "water park",
+        "water tower",
+        "waterfall",
+        "watering hole",
+        "wave",
+        "wet bar",
+        "wheat field",
+        "wind farm",
+        "windmill",
+        "yard",
+        "youth hostel",
+        "zen garden",
+
+    ];
+
+    function searchImages(className) {
+        var container = document.getElementById("imageContainer");
+        container.innerHTML = "";
+
+        var images = {
+                airfield: ['airfield__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                airplane_cabin: ['airplane_cabin__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                airport_terminal: ['airport_terminal__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                alcove: ['alcove__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                alley: ['alley__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                amphitheater: ['amphitheater__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                amusement_arcade: ['amusement_arcade__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                amusement_park: ['amusement_park__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                apartment_building_outdoor: ['apartment_building_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                aquarium: ['aquarium__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                aqueduct: ['aqueduct__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arcade: ['arcade__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arch: ['arch__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                archaelogical_excavation: ['archaelogical_excavation__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                archive: ['archive__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arena_hockey: ['arena_hockey__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arena_performance: ['arena_performance__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arena_rodeo: ['arena_rodeo__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                army_base: ['army_base__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                art_gallery: ['art_gallery__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                art_school: ['art_school__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                art_studio: ['art_studio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                artists_loft: ['artists_loft__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                assembly_line: ['assembly_line__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                athletic_field_outdoor: ['athletic_field_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                atrium_public: ['atrium_public__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                attic: ['attic__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                auditorium: ['auditorium__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                auto_factory: ['auto_factory__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                auto_showroom: ['auto_showroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                badlands: ['badlands__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bakery_shop: ['bakery_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                balcony_exterior: ['balcony_exterior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                balcony_interior: ['balcony_interior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ball_pit: ['ball_pit__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ballroom: ['ballroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bamboo_forest: ['bamboo_forest__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bank_vault: ['bank_vault__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                banquet_hall: ['banquet_hall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bar: ['bar__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                barn: ['barn__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                barndoor: ['barndoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                baseball_field: ['baseball_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                basement: ['basement__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                basketball_court_indoor: ['basketball_court_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bathroom: ['bathroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bazaar_indoor: ['bazaar_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bazaar_outdoor: ['bazaar_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beach: ['beach__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beach_house: ['beach_house__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beauty_salon: ['beauty_salon__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bedchamber: ['bedchamber__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bedroom: ['bedroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beer_garden: ['beer_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beer_hall: ['beer_hall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                berth: ['berth__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                biology_laboratory: ['biology_laboratory__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                boardwalk: ['boardwalk__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                boat_deck: ['boat_deck__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                boathouse: ['boathouse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bookstore: ['bookstore__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                booth_indoor: ['booth_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                botanical_garden: ['botanical_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bow_window_indoor: ['bow_window_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bowling_alley: ['bowling_alley__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                boxing_ring: ['boxing_ring__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bridge: ['bridge__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                building_facade: ['building_facade__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bullring: ['bullring__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                burial_chamber: ['burial_chamber__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bus_interior: ['bus_interior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bus_station_indoor: ['bus_station_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                butchers_shop: ['butchers_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                butte: ['butte__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cabin_outdoor: ['cabin_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cafeteria: ['cafeteria__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                campsite: ['campsite__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                campus: ['campus__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                canal_natural: ['canal_natural__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                canal_urban: ['canal_urban__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                candy_store: ['candy_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                canyon: ['canyon__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                car_interior: ['car_interior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                carrousel: ['carrousel__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                castle: ['castle__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                catacomb: ['catacomb__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cemetery: ['cemetery__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                chalet: ['chalet__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                chemistry_lab: ['chemistry_lab__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                childs_room: ['childs_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                church_indoor: ['church_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                church_outdoor: ['church_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                classroom: ['classroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                clean_room: ['clean_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cliff: ['cliff__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                closet: ['closet__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                clothing_store: ['clothing_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                coast: ['coast__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cockpit: ['cockpit__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                coffee_shop: ['coffee_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                computer_room: ['computer_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                conference_center: ['conference_center__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                conference_room: ['conference_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                construction_site: ['construction_site__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                corn_field: ['corn_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                corral: ['corral__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                corridor: ['corridor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cottage: ['cottage__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                courthouse: ['courthouse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                courtyard: ['courtyard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                creek: ['creek__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                crevasse: ['crevasse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                crosswalk: ['crosswalk__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dam: ['dam__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                delicatessen: ['delicatessen__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                department_store: ['department_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                desert_road: ['desert_road__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                desert_sand: ['desert_sand__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                desert_vegetation: ['desert_vegetation__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                diner_outdoor: ['diner_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dining_hall: ['dining_hall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dining_room: ['dining_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                discotheque: ['discotheque__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                doorway_outdoor: ['doorway_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dorm_room: ['dorm_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                downtown: ['downtown__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dressing_room: ['dressing_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                driveway: ['driveway__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                drugstore: ['drugstore__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                elevator_door: ['elevator_door__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                elevator_lobby: ['elevator_lobby__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                elevator_shaft: ['elevator_shaft__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                embassy: ['embassy__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                engine_room: ['engine_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                entrance_hall: ['entrance_hall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                escalator_indoor: ['escalator_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                excavation: ['excavation__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fabric_store: ['fabric_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                farm: ['farm__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fastfood_restaurant: ['fastfood_restaurant__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                field_cultivated: ['field_cultivated__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                field_road: ['field_road__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                field_wild: ['field_wild__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fire_escape: ['fire_escape__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fire_station: ['fire_station__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fishpond: ['fishpond__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                flea_market_indoor: ['flea_market_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                florist_shop_indoor: ['florist_shop_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                food_court: ['food_court__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                football_field: ['football_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                forest_broadleaf: ['forest_broadleaf__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                forest_path: ['forest_path__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                forest_road: ['forest_road__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                formal_garden: ['formal_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fountain: ['fountain__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                galley: ['galley__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                garage_indoor: ['garage_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                garage_outdoor: ['garage_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                gas_station: ['gas_station__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                gazebo_exterior: ['gazebo_exterior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                general_store_indoor: ['general_store_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                general_store_outdoor: ['general_store_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                gift_shop: ['gift_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                glacier: ['glacier__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                golf_course: ['golf_course__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                greenhouse_indoor: ['greenhouse_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                greenhouse_outdoor: ['greenhouse_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                grotto: ['grotto__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                gymnasium_indoor: ['gymnasium_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hangar_indoor: ['hangar_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hangar_outdoor: ['hangar_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                harbor: ['harbor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hardware_store: ['hardware_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hayfield: ['hayfield__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                heliport: ['heliport__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                highway: ['highway__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                home_office: ['home_office__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                home_theater: ['home_theater__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hospital: ['hospital__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hospital_room: ['hospital_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hot_spring: ['hot_spring__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hotel_outdoor: ['hotel_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hotel_room: ['hotel_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                house: ['house__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hunting_lodge_outdoor: ['hunting_lodge_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_cream_parlor: ['ice_cream_parlor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_floe: ['ice_floe__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_shelf: ['ice_shelf__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_skating_rink_indoor: ['ice_skating_rink_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_skating_rink_outdoor: ['ice_skating_rink_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                iceberg: ['iceberg__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                igloo: ['igloo__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                industrial_area: ['industrial_area__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                inn_outdoor: ['inn_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                islet: ['islet__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                jacuzzi_indoor: ['jacuzzi_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                jail_cell: ['jail_cell__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                japanese_garden: ['japanese_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                jewelry_shop: ['jewelry_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                junkyard: ['junkyard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                kasbah: ['kasbah__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                kennel_outdoor: ['kennel_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                kindergarden_classroom: ['kindergarden_classroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                kitchen: ['kitchen__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lagoon: ['lagoon__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lake_natural: ['lake_natural__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                landfill: ['landfill__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                landing_deck: ['landing_deck__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                laundromat: ['laundromat__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lawn: ['lawn__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lecture_room: ['lecture_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                legislative_chamber: ['legislative_chamber__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                library_indoor: ['library_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                library_outdoor: ['library_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lighthouse: ['lighthouse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                living_room: ['living_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                loading_dock: ['loading_dock__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lobby: ['lobby__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lock_chamber: ['lock_chamber__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                locker_room: ['locker_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mansion: ['mansion__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                manufactured_home: ['manufactured_home__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                market_indoor: ['market_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                market_outdoor: ['market_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                marsh: ['marsh__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                martial_arts_gym: ['martial_arts_gym__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mausoleum: ['mausoleum__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                medina: ['medina__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mezzanine: ['mezzanine__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                moat_water: ['moat_water__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mosque_outdoor: ['mosque_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                motel: ['motel__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mountain: ['mountain__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mountain_path: ['mountain_path__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mountain_snowy: ['mountain_snowy__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                movie_theater_indoor: ['movie_theater_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                museum_indoor: ['museum_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                museum_outdoor: ['museum_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                music_studio: ['music_studio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                natural_history_museum: ['natural_history_museum__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                nursery: ['nursery__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                nursing_home: ['nursing_home__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                oast_house: ['oast_house__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ocean: ['ocean__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                office: ['office__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                office_building: ['office_building__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                office_cubicles: ['office_cubicles__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                oilrig: ['oilrig__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                operating_room: ['operating_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                orchard: ['orchard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                orchestra_pit: ['orchestra_pit__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pagoda: ['pagoda__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                palace: ['palace__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pantry: ['pantry__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                park: ['park__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                parking_garage_indoor: ['parking_garage_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                parking_garage_outdoor: ['parking_garage_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                parking_lot: ['parking_lot__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pasture: ['pasture__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                patio: ['patio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pavilion: ['pavilion__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pet_shop: ['pet_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pharmacy: ['pharmacy__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                phone_booth: ['phone_booth__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                physics_laboratory: ['physics_laboratory__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                picnic_area: ['picnic_area__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pier: ['pier__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pizzeria: ['pizzeria__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                playground: ['playground__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                playroom: ['playroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                plaza: ['plaza__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pond: ['pond__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                porch: ['porch__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                promenade: ['promenade__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pub_indoor: ['pub_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                racecourse: ['racecourse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                raceway: ['raceway__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                raft: ['raft__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                railroad_track: ['railroad_track__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                rainforest: ['rainforest__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                reception: ['reception__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                recreation_room: ['recreation_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                repair_shop: ['repair_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                residential_neighborhood: ['residential_neighborhood__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                restaurant: ['restaurant__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                restaurant_kitchen: ['restaurant_kitchen__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                restaurant_patio: ['restaurant_patio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                rice_paddy: ['rice_paddy__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                river: ['river__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                rock_arch: ['rock_arch__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                roof_garden: ['roof_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                rope_bridge: ['rope_bridge__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ruin: ['ruin__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                runway: ['runway__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                sandbox: ['sandbox__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                sauna: ['sauna__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                schoolhouse: ['schoolhouse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                science_museum: ['science_museum__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                server_room: ['server_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shed: ['shed__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shoe_shop: ['shoe_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shopfront: ['shopfront__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shopping_mall_indoor: ['shopping_mall_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shower: ['shower__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ski_resort: ['ski_resort__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ski_slope: ['ski_slope__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                sky: ['sky__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                skyscraper: ['skyscraper__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                slum: ['slum__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                snowfield: ['snowfield__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                soccer_field: ['soccer_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stable: ['stable__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stadium_baseball: ['stadium_baseball__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stadium_football: ['stadium_football__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stadium_soccer: ['stadium_soccer__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stage_indoor: ['stage_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stage_outdoor: ['stage_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                staircase: ['staircase__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                storage_room: ['storage_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                street: ['street__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                subway_station_platform: ['subway_station_platform__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                supermarket: ['supermarket__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                sushi_bar: ['sushi_bar__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                swamp: ['swamp__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                swimming_hole: ['swimming_hole__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                swimming_pool_indoor: ['swimming_pool_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                swimming_pool_outdoor: ['swimming_pool_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                synagogue_outdoor: ['synagogue_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                television_room: ['television_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                television_studio: ['television_studio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                temple_asia: ['temple_asia__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                throne_room: ['throne_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ticket_booth: ['ticket_booth__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                topiary_garden: ['topiary_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                tower: ['tower__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                toyshop: ['toyshop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                train_interior: ['train_interior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                train_station_platform: ['train_station_platform__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                tree_farm: ['tree_farm__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                tree_house: ['tree_house__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                trench: ['trench__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                tundra: ['tundra__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                underwater_ocean_deep: ['underwater_ocean_deep__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                utility_room: ['utility_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                valley: ['valley__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                vegetable_garden: ['vegetable_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                veterinarians_office: ['veterinarians_office__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                viaduct: ['viaduct__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                village: ['village__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                vineyard: ['vineyard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                volcano: ['volcano__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                volleyball_court_outdoor: ['volleyball_court_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                waiting_room: ['waiting_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                water_park: ['water_park__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                water_tower: ['water_tower__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                waterfall: ['waterfall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                watering_hole: ['watering_hole__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                wave: ['wave__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                wet_bar: ['wet_bar__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                wheat_field: ['wheat_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                wind_farm: ['wind_farm__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                windmill: ['windmill__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                yard: ['yard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                youth_hostel: ['youth_hostel__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                zen_garden: ['zen_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+
+    };
+
+    var imageNames = images[className.replace(/ /g, '_')];
+
+    for (var i = 0; i < imageNames.length; i++) {
+        var image = document.createElement("img");
+
+        image.src = "places/ft/" + imageNames[i];
+        container.appendChild(image);
+    }
+    }
+    </script>
+</body>
+</html>";

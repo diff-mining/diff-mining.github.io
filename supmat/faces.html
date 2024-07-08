@@ -1,0 +1,72 @@
+<html>
+<head><link rel='stylesheet' type='text/css' href='styles.css'>
+<link rel="icon" type="image/png" href="diffmining.png">
+</head>
+<style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+</style>
+    
+<body>
+<h1>Faces</h1>
+<table class='radio-buttons'><tr><td><input type='radio' name='type' value='Finetuned' onclick='updateImages()' checked>Finetuned</td><td><input type='radio' name='type' value='Pretrained' onclick='updateImages()'>Pretrained</td><td><input type='radio' name='type' value='Random' onclick='updateImages()'>Random</td></tr></table><table class='radio-buttons'><tr><td><input type='radio' name='cat' value='1880' onclick='updateImages()'>1880</td><td><input type='radio' name='cat' value='1890' onclick='updateImages()'>1890</td><td><input type='radio' name='cat' value='1900' onclick='updateImages()'>1900</td><td><input type='radio' name='cat' value='1910' onclick='updateImages()'>1910</td><td><input type='radio' name='cat' value='1920' onclick='updateImages()'>1920</td><td><input type='radio' name='cat' value='1930' onclick='updateImages()'>1930</td><td><input type='radio' name='cat' value='1940' onclick='updateImages()'>1940</td><td><input type='radio' name='cat' value='1950' onclick='updateImages()'>1950</td><td><input type='radio' name='cat' value='1960' onclick='updateImages()'>1960</td><td><input type='radio' name='cat' value='1970' onclick='updateImages()'>1970</td><td><input type='radio' name='cat' value='1980' onclick='updateImages()'>1980</td><td><input type='radio' name='cat' value='1990' onclick='updateImages()'>1990</td><td><input type='radio' name='cat' value='2000' onclick='updateImages()'>2000</td><td><input type='radio' name='cat' value='2010' onclick='updateImages()'>2010</td></tr></table><img src='faces\ft\1880__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1880' style='display: none;'>
+<img src='faces\ft\1890__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1890' style='display: none;'>
+<img src='faces\ft\1900__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1900' style='display: none;'>
+<img src='faces\ft\1910__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1910' style='display: none;'>
+<img src='faces\ft\1920__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1920' style='display: none;'>
+<img src='faces\ft\1930__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1930' style='display: none;'>
+<img src='faces\ft\1940__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1940' style='display: none;'>
+<img src='faces\ft\1950__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1950' style='display: none;'>
+<img src='faces\ft\1960__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1960' style='display: none;'>
+<img src='faces\ft\1970__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1970' style='display: none;'>
+<img src='faces\ft\1980__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1980' style='display: none;'>
+<img src='faces\ft\1990__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_1990' style='display: none;'>
+<img src='faces\ft\2000__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_2000' style='display: none;'>
+<img src='faces\ft\2010__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_2010' style='display: none;'>
+<img src='faces\random\1880__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1880' style='display: none;'>
+<img src='faces\random\1890__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1890' style='display: none;'>
+<img src='faces\random\1900__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1900' style='display: none;'>
+<img src='faces\random\1910__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1910' style='display: none;'>
+<img src='faces\random\1920__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1920' style='display: none;'>
+<img src='faces\random\1930__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1930' style='display: none;'>
+<img src='faces\random\1940__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1940' style='display: none;'>
+<img src='faces\random\1950__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1950' style='display: none;'>
+<img src='faces\random\1960__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1960' style='display: none;'>
+<img src='faces\random\1970__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1970' style='display: none;'>
+<img src='faces\random\1980__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1980' style='display: none;'>
+<img src='faces\random\1990__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_1990' style='display: none;'>
+<img src='faces\random\2000__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_2000' style='display: none;'>
+<img src='faces\random\2010__hard_limit_20__top_k_32__min_im_6_random.png' id='Random_2010' style='display: none;'>
+<img src='faces\pt\1880__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1880' style='display: none;'>
+<img src='faces\pt\1890__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1890' style='display: none;'>
+<img src='faces\pt\1900__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1900' style='display: none;'>
+<img src='faces\pt\1910__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1910' style='display: none;'>
+<img src='faces\pt\1920__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1920' style='display: none;'>
+<img src='faces\pt\1930__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1930' style='display: none;'>
+<img src='faces\pt\1940__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1940' style='display: none;'>
+<img src='faces\pt\1950__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1950' style='display: none;'>
+<img src='faces\pt\1960__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1960' style='display: none;'>
+<img src='faces\pt\1970__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1970' style='display: none;'>
+<img src='faces\pt\1980__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1980' style='display: none;'>
+<img src='faces\pt\1990__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_1990' style='display: none;'>
+<img src='faces\pt\2000__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_2000' style='display: none;'>
+<img src='faces\pt\2010__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Pretrained_2010' style='display: none;'>
+<script>function updateImages(){
+var type = document.querySelector('input[name=type]:checked').value;
+var cat = document.querySelector('input[name=cat]:checked').value;
+var images = document.querySelectorAll('img');
+images.forEach(
+    function(img) {
+        console.log(type + '_' + cat)
+        if (img.id.startsWith(type + '_' + cat)) {
+            img.style.display = 'block';
+        } else {
+            img.style.display = 'none';
+        }
+    }
+);
+}
+</script>
+</body></html>

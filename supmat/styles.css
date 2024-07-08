@@ -1,0 +1,39 @@
+@font-face {
+  font-family: custom;
+  src: url(custom.ttf);
+}
+
+body {
+font-family: custom;
+margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+  padding: 2%;
+}

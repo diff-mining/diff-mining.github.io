@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='styles.css'>
+<style>
+body {
+  max-width: 740px;
+  padding: 5%;
+}
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+    }
+  });
+</script>
+</head>
+<body>
+    <h1>Connecting Typicality with Conditional Probability</h1>
+
+    <p>
+    We start from eq. 8 of [<a href='https://arxiv.org/abs/2303.16203'>Li et al. 2023</a>]:
+
+    \begin{equation}
+    p_\theta\left(c_i|x\right) = \frac{1}{\sum_j \exp \left\{\mathbb{E}_{\epsilon, t}\left[L_t(x, \epsilon, c_i) - L_t(x, \epsilon, c_j)\right]\right\}},
+    \tag{1}
+    \label{li}
+    \end{equation}
+    
+    where $p_\theta\left(c_i \mid x\right)$ is the probability of a label $c_i$ conditioned on an input image $x$, across the set of all available labels $c_j$.
+    $L_t$ is the loss of the diffusion model at timestep $t$, defined in eq. 2 of the main paper, computed for a certain noise $\epsilon$ and timestep $t$.
+    </p>
+
+    <p>
+      Instead of computing probability across all classes in the denominator, we only compute the probability across the target class $c$ and $\varnothing$. This is motivated from classifier free guidance [<a href='https://arxiv.org/abs/2207.12598'>Ho and Salimans, 2021</a>], where instead of contrasting $c$ to all other conditions $c'\neq c$, to generate an output that respects $c$, the authors do it against a separate label $\varnothing$, learned from all the data.
+    </p>
+  
+    <p> By reducing the summation over $c_j \in \{\varnothing, c\}$ in the denominator of \eqref{li}, we have:
+    \begin{equation}
+    p_\theta\left(c_i|x\right) = \frac{1}{1 + \exp \left\{\mathbb{E}_{\epsilon, t}\left[L_t(x, \epsilon, c) - L_t(x, \epsilon, \varnothing)\right]\right\}},
+    \tag{2}
+    \label{l}
+    \end{equation}
+    <p>
+    
+    In eq. 3 of our main paper, we define typicality $\;\mathbf{T}(x|c)$, between image $x$ and a label $c$ as:
+    \begin{equation}
+        \mathbf{T}(x|c) =  \mathbb{E}_{\epsilon,t}\left[L_t(x, \epsilon, \varnothing) - L_t(x, \epsilon, c)\right],
+        \tag{3}
+        \label{typicality}
+    \end{equation}
+
+    <p>
+    Taking the log over \eqref{l} and substituting \eqref{typicality}, we have:
+    \begin{equation}
+    p_\theta\left(c|x\right) = \frac{1}{1 + \exp \left(- \mathbf{T} (x|c) \right)}, \tag{4}
+    \label{logistic_loss}
+    \end{equation}
+    </p>
+
+    <p>
+    Given two images $x, x'$:
+    \begin{align}
+        \mathbf{T}(x|c) &> \mathbf{T}(x'|c) &\Longleftrightarrow\\ 
+        1 + \exp( -\mathbf{T}(x|c) ) &< 1 + \exp( -\mathbf{T}(x'|c)) &\Longleftrightarrow\\
+        p_\theta\left(c|x\right) &> p_\theta\left(c|x'\right).
+    \end{align}
+    
+    Thus, ranking through typicality, is equivalent to ranking through the highest conditional probability for a class $c$. <span style="float:right">∎</span>
+    <p/>
+    
+</body>
+</html>
+

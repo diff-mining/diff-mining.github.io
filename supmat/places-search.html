@@ -1,0 +1,1147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Places (search)</title>
+    <style>
+        th, td {
+            padding: 8px;
+            text-align: center; /* Added property to center align text */
+        }
+    </style>
+<link rel="icon" type="image/png" href="diffmining.png">
+</head>
+<body>
+    <center>
+    <h1>Places (search)</h1>
+    <form>
+        <label for="browser"></label>
+        <input list="browsers" name="browser" id="browser" oninput="searchImages(this.value)">
+        <datalist id="browsers">
+            <option value="street">
+            <option value="alley">
+            <option value="server room">
+            <option value="basketball court indoor">
+            <option value="lighthouse">
+            <option value="library indoor">
+            <option value="physics laboratory">
+            <option value="runway">
+            <option value="burial chamber">
+            <option value="swimming pool outdoor">
+            <option value="pavilion">
+            <option value="staircase">
+            <option value="childs room">
+            <option value="village">
+            <option value="hardware store">
+            <option value="greenhouse indoor">
+            <option value="jacuzzi indoor">
+            <option value="castle">
+            <option value="arena hockey">
+            <option value="apartment building outdoor">
+            <option value="mosque outdoor">
+            <option value="greenhouse outdoor">
+            <option value="underwater ocean deep">
+            <option value="gymnasium indoor">
+            <option value="elevator lobby">
+            <option value="clothing store">
+            <option value="roof garden">
+            <option value="ice skating rink outdoor">
+            <option value="bar">
+            <option value="loading dock">
+            <option value="restaurant kitchen">
+            <option value="ticket booth">
+            <option value="amusement arcade">
+            <option value="legislative chamber">
+            <option value="picnic area">
+            <option value="desert sand">
+            <option value="pub indoor">
+            <option value="water tower">
+            <option value="aquarium">
+            <option value="sky">
+            <option value="medina">
+            <option value="harbor">
+            <option value="windmill">
+            <option value="airfield">
+            <option value="mezzanine">
+            <option value="hotel room">
+            <option value="boardwalk">
+            <option value="home office">
+            <option value="veterinarians office">
+            <option value="galley">
+            <option value="office cubicles">
+            <option value="aqueduct">
+            <option value="martial arts gym">
+            <option value="tower">
+            <option value="beach">
+            <option value="swimming hole">
+            <option value="parking garage indoor">
+            <option value="fountain">
+            <option value="synagogue outdoor">
+            <option value="stage outdoor">
+            <option value="railroad track">
+            <option value="coast">
+            <option value="garage outdoor">
+            <option value="ice shelf">
+            <option value="amusement park">
+            <option value="ball pit">
+            <option value="chemistry lab">
+            <option value="bazaar outdoor">
+            <option value="forest road">
+            <option value="forest path">
+            <option value="engine room">
+            <option value="building facade">
+            <option value="carrousel">
+            <option value="field wild">
+            <option value="clean room">
+            <option value="stadium baseball">
+            <option value="food court">
+            <option value="rock arch">
+            <option value="rainforest">
+            <option value="boathouse">
+            <option value="science museum">
+            <option value="soccer field">
+            <option value="drugstore">
+            <option value="rope bridge">
+            <option value="embassy">
+            <option value="industrial area">
+            <option value="viaduct">
+            <option value="bedroom">
+            <option value="moat water">
+            <option value="bank vault">
+            <option value="bus interior">
+            <option value="ballroom">
+            <option value="market indoor">
+            <option value="conference room">
+            <option value="water park">
+            <option value="badlands">
+            <option value="raceway">
+            <option value="banquet hall">
+            <option value="mausoleum">
+            <option value="park">
+            <option value="shopping mall indoor">
+            <option value="restaurant patio">
+            <option value="pet shop">
+            <option value="escalator indoor">
+            <option value="field cultivated">
+            <option value="kasbah">
+            <option value="art school">
+            <option value="pagoda">
+            <option value="fishpond">
+            <option value="stage indoor">
+            <option value="canal urban">
+            <option value="bowling alley">
+            <option value="tree farm">
+            <option value="operating room">
+            <option value="vegetable garden">
+            <option value="youth hostel">
+            <option value="ice skating rink indoor">
+            <option value="lecture room">
+            <option value="orchard">
+            <option value="auditorium">
+            <option value="bazaar indoor">
+            <option value="bow window indoor">
+            <option value="zen garden">
+            <option value="beer garden">
+            <option value="lawn">
+            <option value="general store outdoor">
+            <option value="church outdoor">
+            <option value="plaza">
+            <option value="shoe shop">
+            <option value="oilrig">
+            <option value="igloo">
+            <option value="subway station platform">
+            <option value="ski slope">
+            <option value="restaurant">
+            <option value="car interior">
+            <option value="corn field">
+            <option value="sandbox">
+            <option value="hotel outdoor">
+            <option value="airplane cabin">
+            <option value="living room">
+            <option value="corral">
+            <option value="parking lot">
+            <option value="bedchamber">
+            <option value="hospital">
+            <option value="schoolhouse">
+            <option value="crevasse">
+            <option value="nursing home">
+            <option value="classroom">
+            <option value="trench">
+            <option value="balcony exterior">
+            <option value="stable">
+            <option value="baseball field">
+            <option value="church indoor">
+            <option value="stadium soccer">
+            <option value="dressing room">
+            <option value="tree house">
+            <option value="candy store">
+            <option value="bus station indoor">
+            <option value="desert road">
+            <option value="hayfield">
+            <option value="pizzeria">
+            <option value="elevator shaft">
+            <option value="dining room">
+            <option value="cliff">
+            <option value="attic">
+            <option value="inn outdoor">
+            <option value="formal garden">
+            <option value="residential neighborhood">
+            <option value="arch">
+            <option value="golf course">
+            <option value="barndoor">
+            <option value="driveway">
+            <option value="nursery">
+            <option value="palace">
+            <option value="balcony interior">
+            <option value="fabric store">
+            <option value="archaelogical excavation">
+            <option value="crosswalk">
+            <option value="barn">
+            <option value="auto factory">
+            <option value="closet">
+            <option value="wheat field">
+            <option value="courthouse">
+            <option value="mansion">
+            <option value="gas station">
+            <option value="fire escape">
+            <option value="entrance hall">
+            <option value="alcove">
+            <option value="biology laboratory">
+            <option value="highway">
+            <option value="wind farm">
+            <option value="courtyard">
+            <option value="natural history museum">
+            <option value="topiary garden">
+            <option value="landfill">
+            <option value="conference center">
+            <option value="playroom">
+            <option value="army base">
+            <option value="japanese garden">
+            <option value="lobby">
+            <option value="orchestra pit">
+            <option value="ice cream parlor">
+            <option value="boxing ring">
+            <option value="music studio">
+            <option value="waiting room">
+            <option value="desert vegetation">
+            <option value="campsite">
+            <option value="market outdoor">
+            <option value="islet">
+            <option value="pasture">
+            <option value="bullring">
+            <option value="campus">
+            <option value="bamboo forest">
+            <option value="fire station">
+            <option value="shopfront">
+            <option value="construction site">
+            <option value="department store">
+            <option value="amphitheater">
+            <option value="house">
+            <option value="flea market indoor">
+            <option value="assembly line">
+            <option value="train interior">
+            <option value="raft">
+            <option value="elevator door">
+            <option value="marsh">
+            <option value="cemetery">
+            <option value="cottage">
+            <option value="volcano">
+            <option value="office building">
+            <option value="ice floe">
+            <option value="forest broadleaf">
+            <option value="fastfood restaurant">
+            <option value="library outdoor">
+            <option value="delicatessen">
+            <option value="garage indoor">
+            <option value="chalet">
+            <option value="hunting lodge outdoor">
+            <option value="swimming pool indoor">
+            <option value="cafeteria">
+            <option value="atrium public">
+            <option value="museum outdoor">
+            <option value="parking garage outdoor">
+            <option value="excavation">
+            <option value="stadium football">
+            <option value="phone booth">
+            <option value="porch">
+            <option value="florist shop indoor">
+            <option value="volleyball court outdoor">
+            <option value="basement">
+            <option value="downtown">
+            <option value="corridor">
+            <option value="butte">
+            <option value="pier">
+            <option value="motel">
+            <option value="general store indoor">
+            <option value="train station platform">
+            <option value="gift shop">
+            <option value="jail cell">
+            <option value="patio">
+            <option value="river">
+            <option value="museum indoor">
+            <option value="catacomb">
+            <option value="sauna">
+            <option value="television studio">
+            <option value="temple asia">
+            <option value="shed">
+            <option value="vineyard">
+            <option value="athletic field outdoor">
+            <option value="reception">
+            <option value="bathroom">
+            <option value="oast house">
+            <option value="playground">
+            <option value="racecourse">
+            <option value="kitchen">
+            <option value="botanical garden">
+            <option value="canal natural">
+            <option value="grotto">
+            <option value="football field">
+            <option value="boat deck">
+            <option value="cockpit">
+            <option value="mountain path">
+            <option value="home theater">
+            <option value="swamp">
+            <option value="farm">
+            <option value="rice paddy">
+            <option value="mountain snowy">
+            <option value="dining hall">
+            <option value="toyshop">
+            <option value="utility room">
+            <option value="dorm room">
+            <option value="office">
+            <option value="locker room">
+            <option value="hangar outdoor">
+            <option value="slum">
+            <option value="manufactured home">
+            <option value="recreation room">
+            <option value="dam">
+            <option value="landing deck">
+            <option value="yard">
+            <option value="coffee shop">
+            <option value="auto showroom">
+            <option value="booth indoor">
+            <option value="pond">
+            <option value="wet bar">
+            <option value="gazebo exterior">
+            <option value="wave">
+            <option value="iceberg">
+            <option value="glacier">
+            <option value="arcade">
+            <option value="ocean">
+            <option value="arena rodeo">
+            <option value="lake natural">
+            <option value="skyscraper">
+            <option value="pantry">
+            <option value="sushi bar">
+            <option value="hot spring">
+            <option value="kindergarden classroom">
+            <option value="arena performance">
+            <option value="diner outdoor">
+            <option value="movie theater indoor">
+            <option value="cabin outdoor">
+            <option value="canyon">
+            <option value="snowfield">
+            <option value="beach house">
+            <option value="beer hall">
+            <option value="hospital room">
+            <option value="bridge">
+            <option value="doorway outdoor">
+            <option value="junkyard">
+            <option value="artists loft">
+            <option value="tundra">
+            <option value="art gallery">
+            <option value="television room">
+            <option value="watering hole">
+            <option value="computer room">
+            <option value="creek">
+            <option value="ski resort">
+            <option value="shower">
+            <option value="storage room">
+            <option value="laundromat">
+            <option value="promenade">
+            <option value="ruin">
+            <option value="throne room">
+            <option value="jewelry shop">
+            <option value="berth">
+            <option value="valley">
+            <option value="archive">
+            <option value="lagoon">
+            <option value="bookstore">
+            <option value="lock chamber">
+            <option value="mountain">
+            <option value="supermarket">
+            <option value="waterfall">
+            <option value="bakery shop">
+            <option value="field road">
+            <option value="beauty salon">
+            <option value="art studio">
+            <option value="repair shop">
+            <option value="butchers shop">
+            <option value="discotheque">
+            <option value="airport terminal">
+            <option value="kennel outdoor">
+            <option value="hangar indoor">
+            <option value="heliport">
+            <option value="pharmacy">
+
+        </datalist>
+    </form>
+    <br>
+    <div id="imageContainer"></div>
+    </center>
+
+    <script>
+        var placesList = [
+        "street",
+        "alley",
+        "server room",
+        "basketball court indoor",
+        "lighthouse",
+        "library indoor",
+        "physics laboratory",
+        "runway",
+        "burial chamber",
+        "swimming pool outdoor",
+        "pavilion",
+        "staircase",
+        "childs room",
+        "village",
+        "hardware store",
+        "greenhouse indoor",
+        "jacuzzi indoor",
+        "castle",
+        "arena hockey",
+        "apartment building outdoor",
+        "mosque outdoor",
+        "greenhouse outdoor",
+        "underwater ocean deep",
+        "gymnasium indoor",
+        "elevator lobby",
+        "clothing store",
+        "roof garden",
+        "ice skating rink outdoor",
+        "bar",
+        "loading dock",
+        "restaurant kitchen",
+        "ticket booth",
+        "amusement arcade",
+        "legislative chamber",
+        "picnic area",
+        "desert sand",
+        "pub indoor",
+        "water tower",
+        "aquarium",
+        "sky",
+        "medina",
+        "harbor",
+        "windmill",
+        "airfield",
+        "mezzanine",
+        "hotel room",
+        "boardwalk",
+        "home office",
+        "veterinarians office",
+        "galley",
+        "office cubicles",
+        "aqueduct",
+        "martial arts gym",
+        "tower",
+        "beach",
+        "swimming hole",
+        "parking garage indoor",
+        "fountain",
+        "synagogue outdoor",
+        "stage outdoor",
+        "railroad track",
+        "coast",
+        "garage outdoor",
+        "ice shelf",
+        "amusement park",
+        "ball pit",
+        "chemistry lab",
+        "bazaar outdoor",
+        "forest road",
+        "forest path",
+        "engine room",
+        "building facade",
+        "carrousel",
+        "field wild",
+        "clean room",
+        "stadium baseball",
+        "food court",
+        "rock arch",
+        "rainforest",
+        "boathouse",
+        "science museum",
+        "soccer field",
+        "drugstore",
+        "rope bridge",
+        "embassy",
+        "industrial area",
+        "viaduct",
+        "bedroom",
+        "moat water",
+        "bank vault",
+        "bus interior",
+        "ballroom",
+        "market indoor",
+        "conference room",
+        "water park",
+        "badlands",
+        "raceway",
+        "banquet hall",
+        "mausoleum",
+        "park",
+        "shopping mall indoor",
+        "restaurant patio",
+        "pet shop",
+        "escalator indoor",
+        "field cultivated",
+        "kasbah",
+        "art school",
+        "pagoda",
+        "fishpond",
+        "stage indoor",
+        "canal urban",
+        "bowling alley",
+        "tree farm",
+        "operating room",
+        "vegetable garden",
+        "youth hostel",
+        "ice skating rink indoor",
+        "lecture room",
+        "orchard",
+        "auditorium",
+        "bazaar indoor",
+        "bow window indoor",
+        "zen garden",
+        "beer garden",
+        "lawn",
+        "general store outdoor",
+        "church outdoor",
+        "plaza",
+        "shoe shop",
+        "oilrig",
+        "igloo",
+        "subway station platform",
+        "ski slope",
+        "restaurant",
+        "car interior",
+        "corn field",
+        "sandbox",
+        "hotel outdoor",
+        "airplane cabin",
+        "living room",
+        "corral",
+        "parking lot",
+        "bedchamber",
+        "hospital",
+        "schoolhouse",
+        "crevasse",
+        "nursing home",
+        "classroom",
+        "trench",
+        "balcony exterior",
+        "stable",
+        "baseball field",
+        "church indoor",
+        "stadium soccer",
+        "dressing room",
+        "tree house",
+        "candy store",
+        "bus station indoor",
+        "desert road",
+        "hayfield",
+        "pizzeria",
+        "elevator shaft",
+        "dining room",
+        "cliff",
+        "attic",
+        "inn outdoor",
+        "formal garden",
+        "residential neighborhood",
+        "arch",
+        "golf course",
+        "barndoor",
+        "driveway",
+        "nursery",
+        "palace",
+        "balcony interior",
+        "fabric store",
+        "archaelogical excavation",
+        "crosswalk",
+        "barn",
+        "auto factory",
+        "closet",
+        "wheat field",
+        "courthouse",
+        "mansion",
+        "gas station",
+        "fire escape",
+        "entrance hall",
+        "alcove",
+        "biology laboratory",
+        "highway",
+        "wind farm",
+        "courtyard",
+        "natural history museum",
+        "topiary garden",
+        "landfill",
+        "conference center",
+        "playroom",
+        "army base",
+        "japanese garden",
+        "lobby",
+        "orchestra pit",
+        "ice cream parlor",
+        "boxing ring",
+        "music studio",
+        "waiting room",
+        "desert vegetation",
+        "campsite",
+        "market outdoor",
+        "islet",
+        "pasture",
+        "bullring",
+        "campus",
+        "bamboo forest",
+        "fire station",
+        "shopfront",
+        "construction site",
+        "department store",
+        "amphitheater",
+        "house",
+        "flea market indoor",
+        "assembly line",
+        "train interior",
+        "raft",
+        "elevator door",
+        "marsh",
+        "cemetery",
+        "cottage",
+        "volcano",
+        "office building",
+        "ice floe",
+        "forest broadleaf",
+        "fastfood restaurant",
+        "library outdoor",
+        "delicatessen",
+        "garage indoor",
+        "chalet",
+        "hunting lodge outdoor",
+        "swimming pool indoor",
+        "cafeteria",
+        "atrium public",
+        "museum outdoor",
+        "parking garage outdoor",
+        "excavation",
+        "stadium football",
+        "phone booth",
+        "porch",
+        "florist shop indoor",
+        "volleyball court outdoor",
+        "basement",
+        "downtown",
+        "corridor",
+        "butte",
+        "pier",
+        "motel",
+        "general store indoor",
+        "train station platform",
+        "gift shop",
+        "jail cell",
+        "patio",
+        "river",
+        "museum indoor",
+        "catacomb",
+        "sauna",
+        "television studio",
+        "temple asia",
+        "shed",
+        "vineyard",
+        "athletic field outdoor",
+        "reception",
+        "bathroom",
+        "oast house",
+        "playground",
+        "racecourse",
+        "kitchen",
+        "botanical garden",
+        "canal natural",
+        "grotto",
+        "football field",
+        "boat deck",
+        "cockpit",
+        "mountain path",
+        "home theater",
+        "swamp",
+        "farm",
+        "rice paddy",
+        "mountain snowy",
+        "dining hall",
+        "toyshop",
+        "utility room",
+        "dorm room",
+        "office",
+        "locker room",
+        "hangar outdoor",
+        "slum",
+        "manufactured home",
+        "recreation room",
+        "dam",
+        "landing deck",
+        "yard",
+        "coffee shop",
+        "auto showroom",
+        "booth indoor",
+        "pond",
+        "wet bar",
+        "gazebo exterior",
+        "wave",
+        "iceberg",
+        "glacier",
+        "arcade",
+        "ocean",
+        "arena rodeo",
+        "lake natural",
+        "skyscraper",
+        "pantry",
+        "sushi bar",
+        "hot spring",
+        "kindergarden classroom",
+        "arena performance",
+        "diner outdoor",
+        "movie theater indoor",
+        "cabin outdoor",
+        "canyon",
+        "snowfield",
+        "beach house",
+        "beer hall",
+        "hospital room",
+        "bridge",
+        "doorway outdoor",
+        "junkyard",
+        "artists loft",
+        "tundra",
+        "art gallery",
+        "television room",
+        "watering hole",
+        "computer room",
+        "creek",
+        "ski resort",
+        "shower",
+        "storage room",
+        "laundromat",
+        "promenade",
+        "ruin",
+        "throne room",
+        "jewelry shop",
+        "berth",
+        "valley",
+        "archive",
+        "lagoon",
+        "bookstore",
+        "lock chamber",
+        "mountain",
+        "supermarket",
+        "waterfall",
+        "bakery shop",
+        "field road",
+        "beauty salon",
+        "art studio",
+        "repair shop",
+        "butchers shop",
+        "discotheque",
+        "airport terminal",
+        "kennel outdoor",
+        "hangar indoor",
+        "heliport",
+        "pharmacy",
+
+    ];
+
+    function searchImages(className) {
+        var container = document.getElementById("imageContainer");
+        container.innerHTML = "";
+
+        var images = {
+                street: ['street__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                alley: ['alley__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                server_room: ['server_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                basketball_court_indoor: ['basketball_court_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lighthouse: ['lighthouse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                library_indoor: ['library_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                physics_laboratory: ['physics_laboratory__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                runway: ['runway__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                burial_chamber: ['burial_chamber__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                swimming_pool_outdoor: ['swimming_pool_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pavilion: ['pavilion__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                staircase: ['staircase__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                childs_room: ['childs_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                village: ['village__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hardware_store: ['hardware_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                greenhouse_indoor: ['greenhouse_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                jacuzzi_indoor: ['jacuzzi_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                castle: ['castle__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arena_hockey: ['arena_hockey__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                apartment_building_outdoor: ['apartment_building_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mosque_outdoor: ['mosque_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                greenhouse_outdoor: ['greenhouse_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                underwater_ocean_deep: ['underwater_ocean_deep__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                gymnasium_indoor: ['gymnasium_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                elevator_lobby: ['elevator_lobby__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                clothing_store: ['clothing_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                roof_garden: ['roof_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_skating_rink_outdoor: ['ice_skating_rink_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bar: ['bar__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                loading_dock: ['loading_dock__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                restaurant_kitchen: ['restaurant_kitchen__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ticket_booth: ['ticket_booth__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                amusement_arcade: ['amusement_arcade__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                legislative_chamber: ['legislative_chamber__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                picnic_area: ['picnic_area__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                desert_sand: ['desert_sand__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pub_indoor: ['pub_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                water_tower: ['water_tower__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                aquarium: ['aquarium__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                sky: ['sky__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                medina: ['medina__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                harbor: ['harbor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                windmill: ['windmill__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                airfield: ['airfield__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mezzanine: ['mezzanine__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hotel_room: ['hotel_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                boardwalk: ['boardwalk__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                home_office: ['home_office__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                veterinarians_office: ['veterinarians_office__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                galley: ['galley__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                office_cubicles: ['office_cubicles__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                aqueduct: ['aqueduct__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                martial_arts_gym: ['martial_arts_gym__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                tower: ['tower__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beach: ['beach__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                swimming_hole: ['swimming_hole__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                parking_garage_indoor: ['parking_garage_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fountain: ['fountain__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                synagogue_outdoor: ['synagogue_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stage_outdoor: ['stage_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                railroad_track: ['railroad_track__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                coast: ['coast__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                garage_outdoor: ['garage_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_shelf: ['ice_shelf__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                amusement_park: ['amusement_park__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ball_pit: ['ball_pit__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                chemistry_lab: ['chemistry_lab__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bazaar_outdoor: ['bazaar_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                forest_road: ['forest_road__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                forest_path: ['forest_path__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                engine_room: ['engine_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                building_facade: ['building_facade__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                carrousel: ['carrousel__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                field_wild: ['field_wild__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                clean_room: ['clean_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stadium_baseball: ['stadium_baseball__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                food_court: ['food_court__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                rock_arch: ['rock_arch__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                rainforest: ['rainforest__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                boathouse: ['boathouse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                science_museum: ['science_museum__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                soccer_field: ['soccer_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                drugstore: ['drugstore__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                rope_bridge: ['rope_bridge__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                embassy: ['embassy__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                industrial_area: ['industrial_area__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                viaduct: ['viaduct__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bedroom: ['bedroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                moat_water: ['moat_water__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bank_vault: ['bank_vault__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bus_interior: ['bus_interior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ballroom: ['ballroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                market_indoor: ['market_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                conference_room: ['conference_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                water_park: ['water_park__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                badlands: ['badlands__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                raceway: ['raceway__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                banquet_hall: ['banquet_hall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mausoleum: ['mausoleum__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                park: ['park__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shopping_mall_indoor: ['shopping_mall_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                restaurant_patio: ['restaurant_patio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pet_shop: ['pet_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                escalator_indoor: ['escalator_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                field_cultivated: ['field_cultivated__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                kasbah: ['kasbah__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                art_school: ['art_school__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pagoda: ['pagoda__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fishpond: ['fishpond__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stage_indoor: ['stage_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                canal_urban: ['canal_urban__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bowling_alley: ['bowling_alley__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                tree_farm: ['tree_farm__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                operating_room: ['operating_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                vegetable_garden: ['vegetable_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                youth_hostel: ['youth_hostel__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_skating_rink_indoor: ['ice_skating_rink_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lecture_room: ['lecture_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                orchard: ['orchard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                auditorium: ['auditorium__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bazaar_indoor: ['bazaar_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bow_window_indoor: ['bow_window_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                zen_garden: ['zen_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beer_garden: ['beer_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lawn: ['lawn__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                general_store_outdoor: ['general_store_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                church_outdoor: ['church_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                plaza: ['plaza__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shoe_shop: ['shoe_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                oilrig: ['oilrig__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                igloo: ['igloo__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                subway_station_platform: ['subway_station_platform__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ski_slope: ['ski_slope__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                restaurant: ['restaurant__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                car_interior: ['car_interior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                corn_field: ['corn_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                sandbox: ['sandbox__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hotel_outdoor: ['hotel_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                airplane_cabin: ['airplane_cabin__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                living_room: ['living_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                corral: ['corral__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                parking_lot: ['parking_lot__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bedchamber: ['bedchamber__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hospital: ['hospital__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                schoolhouse: ['schoolhouse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                crevasse: ['crevasse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                nursing_home: ['nursing_home__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                classroom: ['classroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                trench: ['trench__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                balcony_exterior: ['balcony_exterior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stable: ['stable__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                baseball_field: ['baseball_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                church_indoor: ['church_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stadium_soccer: ['stadium_soccer__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dressing_room: ['dressing_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                tree_house: ['tree_house__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                candy_store: ['candy_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bus_station_indoor: ['bus_station_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                desert_road: ['desert_road__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hayfield: ['hayfield__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pizzeria: ['pizzeria__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                elevator_shaft: ['elevator_shaft__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dining_room: ['dining_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cliff: ['cliff__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                attic: ['attic__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                inn_outdoor: ['inn_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                formal_garden: ['formal_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                residential_neighborhood: ['residential_neighborhood__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arch: ['arch__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                golf_course: ['golf_course__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                barndoor: ['barndoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                driveway: ['driveway__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                nursery: ['nursery__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                palace: ['palace__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                balcony_interior: ['balcony_interior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fabric_store: ['fabric_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                archaelogical_excavation: ['archaelogical_excavation__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                crosswalk: ['crosswalk__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                barn: ['barn__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                auto_factory: ['auto_factory__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                closet: ['closet__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                wheat_field: ['wheat_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                courthouse: ['courthouse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mansion: ['mansion__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                gas_station: ['gas_station__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fire_escape: ['fire_escape__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                entrance_hall: ['entrance_hall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                alcove: ['alcove__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                biology_laboratory: ['biology_laboratory__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                highway: ['highway__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                wind_farm: ['wind_farm__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                courtyard: ['courtyard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                natural_history_museum: ['natural_history_museum__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                topiary_garden: ['topiary_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                landfill: ['landfill__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                conference_center: ['conference_center__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                playroom: ['playroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                army_base: ['army_base__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                japanese_garden: ['japanese_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lobby: ['lobby__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                orchestra_pit: ['orchestra_pit__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_cream_parlor: ['ice_cream_parlor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                boxing_ring: ['boxing_ring__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                music_studio: ['music_studio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                waiting_room: ['waiting_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                desert_vegetation: ['desert_vegetation__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                campsite: ['campsite__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                market_outdoor: ['market_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                islet: ['islet__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pasture: ['pasture__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bullring: ['bullring__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                campus: ['campus__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bamboo_forest: ['bamboo_forest__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fire_station: ['fire_station__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shopfront: ['shopfront__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                construction_site: ['construction_site__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                department_store: ['department_store__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                amphitheater: ['amphitheater__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                house: ['house__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                flea_market_indoor: ['flea_market_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                assembly_line: ['assembly_line__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                train_interior: ['train_interior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                raft: ['raft__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                elevator_door: ['elevator_door__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                marsh: ['marsh__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cemetery: ['cemetery__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cottage: ['cottage__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                volcano: ['volcano__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                office_building: ['office_building__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ice_floe: ['ice_floe__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                forest_broadleaf: ['forest_broadleaf__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                fastfood_restaurant: ['fastfood_restaurant__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                library_outdoor: ['library_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                delicatessen: ['delicatessen__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                garage_indoor: ['garage_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                chalet: ['chalet__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hunting_lodge_outdoor: ['hunting_lodge_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                swimming_pool_indoor: ['swimming_pool_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cafeteria: ['cafeteria__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                atrium_public: ['atrium_public__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                museum_outdoor: ['museum_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                parking_garage_outdoor: ['parking_garage_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                excavation: ['excavation__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                stadium_football: ['stadium_football__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                phone_booth: ['phone_booth__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                porch: ['porch__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                florist_shop_indoor: ['florist_shop_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                volleyball_court_outdoor: ['volleyball_court_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                basement: ['basement__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                downtown: ['downtown__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                corridor: ['corridor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                butte: ['butte__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pier: ['pier__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                motel: ['motel__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                general_store_indoor: ['general_store_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                train_station_platform: ['train_station_platform__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                gift_shop: ['gift_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                jail_cell: ['jail_cell__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                patio: ['patio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                river: ['river__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                museum_indoor: ['museum_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                catacomb: ['catacomb__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                sauna: ['sauna__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                television_studio: ['television_studio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                temple_asia: ['temple_asia__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shed: ['shed__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                vineyard: ['vineyard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                athletic_field_outdoor: ['athletic_field_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                reception: ['reception__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bathroom: ['bathroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                oast_house: ['oast_house__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                playground: ['playground__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                racecourse: ['racecourse__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                kitchen: ['kitchen__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                botanical_garden: ['botanical_garden__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                canal_natural: ['canal_natural__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                grotto: ['grotto__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                football_field: ['football_field__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                boat_deck: ['boat_deck__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cockpit: ['cockpit__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mountain_path: ['mountain_path__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                home_theater: ['home_theater__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                swamp: ['swamp__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                farm: ['farm__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                rice_paddy: ['rice_paddy__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mountain_snowy: ['mountain_snowy__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dining_hall: ['dining_hall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                toyshop: ['toyshop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                utility_room: ['utility_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dorm_room: ['dorm_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                office: ['office__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                locker_room: ['locker_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hangar_outdoor: ['hangar_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                slum: ['slum__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                manufactured_home: ['manufactured_home__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                recreation_room: ['recreation_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                dam: ['dam__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                landing_deck: ['landing_deck__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                yard: ['yard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                coffee_shop: ['coffee_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                auto_showroom: ['auto_showroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                booth_indoor: ['booth_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pond: ['pond__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                wet_bar: ['wet_bar__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                gazebo_exterior: ['gazebo_exterior__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                wave: ['wave__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                iceberg: ['iceberg__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                glacier: ['glacier__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arcade: ['arcade__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ocean: ['ocean__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arena_rodeo: ['arena_rodeo__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lake_natural: ['lake_natural__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                skyscraper: ['skyscraper__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pantry: ['pantry__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                sushi_bar: ['sushi_bar__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hot_spring: ['hot_spring__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                kindergarden_classroom: ['kindergarden_classroom__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                arena_performance: ['arena_performance__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                diner_outdoor: ['diner_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                movie_theater_indoor: ['movie_theater_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                cabin_outdoor: ['cabin_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                canyon: ['canyon__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                snowfield: ['snowfield__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beach_house: ['beach_house__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beer_hall: ['beer_hall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hospital_room: ['hospital_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bridge: ['bridge__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                doorway_outdoor: ['doorway_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                junkyard: ['junkyard__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                artists_loft: ['artists_loft__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                tundra: ['tundra__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                art_gallery: ['art_gallery__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                television_room: ['television_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                watering_hole: ['watering_hole__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                computer_room: ['computer_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                creek: ['creek__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ski_resort: ['ski_resort__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                shower: ['shower__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                storage_room: ['storage_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                laundromat: ['laundromat__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                promenade: ['promenade__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                ruin: ['ruin__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                throne_room: ['throne_room__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                jewelry_shop: ['jewelry_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                berth: ['berth__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                valley: ['valley__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                archive: ['archive__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lagoon: ['lagoon__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bookstore: ['bookstore__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                lock_chamber: ['lock_chamber__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                mountain: ['mountain__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                supermarket: ['supermarket__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                waterfall: ['waterfall__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                bakery_shop: ['bakery_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                field_road: ['field_road__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                beauty_salon: ['beauty_salon__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                art_studio: ['art_studio__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                repair_shop: ['repair_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                butchers_shop: ['butchers_shop__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                discotheque: ['discotheque__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                airport_terminal: ['airport_terminal__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                kennel_outdoor: ['kennel_outdoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                hangar_indoor: ['hangar_indoor__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                heliport: ['heliport__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+                pharmacy: ['pharmacy__hard_limit_7__top_k_6__min_im_6_ranked.png'],
+
+    };
+
+    var imageNames = images[className.replace(/ /g, '_')];
+
+    for (var i = 0; i < imageNames.length; i++) {
+        var image = document.createElement("img");
+
+        image.src = "places/ft/" + imageNames[i];
+        container.appendChild(image);
+    }
+    }
+    </script>
+</body>
+</html>
