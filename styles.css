@@ -5,7 +5,7 @@
 
 body {
   font-family: custom;
-  max-width: 55%;
+  max-width: 58%;
   margin: auto;
 }
 
@@ -252,8 +252,8 @@ main {
 }
 
 .text{
-  text-align: center;
-  font-size: 25px
+  text-align: justify;
+  font-size: 20px
 }
 
 .description {
@@ -272,7 +272,7 @@ table {
 }
 
 .carousel-caption{
-  top: 100%;
+  top: 80%;
 }
 
 .carousel-indicators{
