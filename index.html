@@ -144,14 +144,14 @@ Our approach takes as input a dataset with image-level tags, such as time, geogr
     <div class="carousel-item active" data-bs-interval="2000">
       <img src="approach/ranking.png" class="d-block w-100" alt="Patches from three datasets of faces, cars and geo ranked according to random, typicality and negative typicality.">
       <div class="carousel-caption d-none d-md-block" style="top: 18em;">
-        <p><b>Typical elements are informative of the conditioning label.</b> We visualize the top-6 patches ranked according to typicality (T) with respect to the conditioning class label, negative typicality (−T), and randomly (Rand.). The two rows correspond to different classes from each of the four datasets.
+        <p><b>Typical elements are informative of the conditioning label.</b> We visualize the top-6 patches ranked according to typicality ($\mathbf{T}$) with respect to the conditioning class label, negative typicality ($-\mathbf{T}$), and randomly (Rand.). The two rows correspond to different classes from each of the four datasets.
         </p>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="10000">
       <img src="approach/finetuning.png" alt="Typicality visualized before and after finetuning across three datasets of faces cars and geo." class="d-block w-100">
       <div class="carousel-caption d-none d-md-block" style="top: 26em;">
-        <p><b>Effect of finetuning.</b> <b>(a)</b> For the same USA image (top), finetuning changes the spatial allocation of typicality before (middle) and after (bottom) finetuning. <b>(b)</b> This results in different typical clusters (USA), which, after finetuning (bottom), select for more typical elements like mailboxes. <b>(c)</b> Translation (Sec. 5.1) of a picture of a road from France (top) to Thailand without finetuning (middle) suffers from data biases in the base model turning the road into a river and erasing utility poles. After finetuning on the G^3 dataset (bottom), the translated image is more consistent with the original.
+        <p><b>Effect of finetuning.</b> <b>(a)</b> For the same USA image (top), finetuning changes the spatial allocation of typicality before (middle) and after (bottom) finetuning. <b>(b)</b> This results in different typical clusters (USA), which, after finetuning (bottom), select for more typical elements like mailboxes. <b>(c)</b> Translation from France (top) to Thailand without finetuning (middle) suffers from data biases in the base model turning the road into a river and erasing utility poles. After finetuning on the G^3 dataset (bottom), the translated image is more consistent with the original.
       </p>
       </div>
     </div>
@@ -177,7 +177,7 @@ Our approach takes as input a dataset with image-level tags, such as time, geogr
   <tr>
     <td>1.&nbsp<b>Finetuning</b></td>
     <td>📉</td>
-    <td>Given labels $Y$, we finetune a standard a conditional latent diffusion model with a loss $L_{t}\left(x, \epsilon, c(Y)\right)$, where $c(Y)$ is a prompt of the form $c(Y) = \text{“An image of {Y}”}$.</td>
+    <td>Given a label $y$, we finetune a standard a conditional latent diffusion model with a loss $L_{t}\left(x, \epsilon, c(y)\right)$ and <a href="https://diffusionfeatures.github.io/">c.f.g.</a>, where $c(y)$ is a prompt of the form $c(y) = \text{“An image of {y}”}$.</td>
   </tr>
 
   <tr>
@@ -189,7 +189,7 @@ Our approach takes as input a dataset with image-level tags, such as time, geogr
   <tr>
   <td>3.&nbsp<b>Clustering</b></td>
   <td>🧫</td>
-  <td>Having the most typical patches describing the image we cluster them using <a href="https://diffusionfeatures.github.io/">DIFT-161</a> features, and rank clusters according to their median typicality.</td>
+  <td>After extracting the most typical patches from each image we cluster them using <a href="https://diffusionfeatures.github.io/">DIFT-161</a> features, and rank clusters according to their median typicality.</td>
   </tr>
   </table>
 </div>
