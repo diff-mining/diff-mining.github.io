@@ -147,7 +147,7 @@ Our approach takes as input a dataset with image-level tags, such as time, geogr
     <div class="carousel-item active" data-bs-interval="2000">
       <img src="approach/ranking.png" class="d-block w-100" alt="Patches from three datasets of faces, cars and geo ranked according to random, typicality and negative typicality.">
       <div class="carousel-caption d-none d-md-block" style="top: 18em;">
-        <p><b>Typical elements are informative of the conditioning label.</b> We visualize the top-6 patches ranked according to typicality ($\mathbf{T}$) with respect to the conditioning class label, negative typicality ($-\mathbf{T}$), and randomly (Rand.). The two rows correspond to different classes from each of the four datasets.
+        <p><b>Typical elements are informative of the conditioning label.</b> We visualize the top-6 patches ranked according to typicality ($\mathbf{T}\$) with respect to the conditioning class label, negative typicality ($-\mathbf{T}\$), and randomly (Rand.). The two rows correspond to different classes from each of the four datasets.
         </p>
       </div>
     </div>
@@ -180,13 +180,13 @@ Our approach takes as input a dataset with image-level tags, such as time, geogr
   <tr>
     <td>1.&nbsp<b>Finetuning</b></td>
     <td>📉</td>
-    <td>Given a label $y$, we finetune a standard conditional latent diffusion model with a loss $L_{t}\left(x, \epsilon, c(y)\right)$ and <a href="https://diffusionfeatures.github.io/">c.f.g.</a>, where $c(y)$ is a prompt of the form $c(y) = \text{“An image of {y}”}$.</td>
+    <td>Given a label $y\$, we finetune a standard conditional latent diffusion model with a loss $L_{t}\left(x, \epsilon, c(y)\right)\$ and <a href="https://diffusionfeatures.github.io/">c.f.g.</a>, where $c(y)\$ is a prompt of the form $c(y) = \text{“An image of {y}”}\$.</td>
   </tr>
 
   <tr>
   <td>2.&nbsp<b>Ranking</b></td>
   <td>🛕</td>
-  <td>Inspired from <a href="https://diffusion-classifier.github.io/">Li et al. 2021</a>, we define a patch based ranking measure of typicality $\mathbf{T}$, given a conditioning label $c$: $\mathbf{T} (x|c) =  \mathbb{E}_{\epsilon,t}[L_t(x, \epsilon, \varnothing) - L_t(x, \epsilon, c)].$</td>
+  <td>Inspired from <a href="https://diffusion-classifier.github.io/">Li et al. 2021</a>, we define a patch based ranking measure of typicality $\mathbf{T}\$, given a conditioning label $c\$: $\mathbf{T} (x|c) =  \mathbb{E}_{\epsilon,t}[L_t(x, \epsilon, \varnothing) - L_t(x, \epsilon, c)].\$</td>
   </tr>
 
   <tr>
@@ -208,14 +208,14 @@ Our approach takes as input a dataset with image-level tags, such as time, geogr
     <div class="carousel-item active" data-bs-interval="10000">
       <img src="applications/variation.png" alt="" class="d-block w-100">
       <div class="carousel-caption d-none d-md-block" style="top: 36em;">
-        <p><b>Clustering typical translations of elements across countries.</b> Ranking translated visual elements according to $\mathbf{T}$ and clustering the translated sequences results in groups of elements with similar variations. We show elements from 6 selected clusters out of 32. The source image for each sequence is highlighted in <span style="color: red;">red</span>.
+        <p><b>Clustering typical translations of elements across countries.</b> Ranking translated visual elements according to $\mathbf{T}\$ and clustering the translated sequences results in groups of elements with similar variations. We show elements from 6 selected clusters out of 32. The source image for each sequence is highlighted in <span style="color: red;">red</span>.
         </p>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <img src="applications/xray.png" class="d-block w-100" alt="Visualization of typicality on frontal view X-ray showing improve localization after finetuning.">
       <div class="carousel-caption d-none d-md-block" style="top: 22em;">
-        <p><b>Localizing abnormal areas in medical images.</b> We visualize typicality when finetuning our model on the CXR8 dataset of thorax diseases. After fine-tuning (ft.), we can see a clear focus of the typicality score on expert annotated areas (<span style="color: red;">red</span> boxes) for each disease, while initial predictions from the pretrained Stable Diffusion V1.5 model (pt.) are mostly noise. Images are ordered by AUC-PR after finetuning. With $\uparrow$ we delimitate performance before and after finetuning, in the last row.</p>
+        <p><b>Localizing abnormal areas in medical images.</b> We visualize typicality when finetuning our model on the CXR8 dataset of thorax diseases. After fine-tuning (ft.), we can see a clear focus of the typicality score on expert annotated areas (<span style="color: red;">red</span> boxes) for each disease, while initial predictions from the pretrained Stable Diffusion V1.5 model (pt.) are mostly noise. Images are ordered by AUC-PR after finetuning. With $\uparrow\$ we delimitate performance before and after finetuning, in the last row.</p>
       </div>
     </div>
   </div>
