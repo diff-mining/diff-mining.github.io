@@ -1,0 +1,52 @@
+<html>
+<head><link rel='stylesheet' type='text/css' href='styles.css'>
+<link rel="icon" type="image/png" href="diffmining.png">
+</head>
+<style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+</style>
+    
+<body>
+<h1>Geo (Thailand)</h1>
+<h2>Mining images generated with the finetuned model and ddpm across various cfg.</h2>
+<table class='radio-buttons'><tr><td style='padding: 10px 10px;'><input type='radio' name='type' value='Finetuned' onclick='updateImages()' checked>Finetuned</td><td style='padding: 10px 10px;'><input type='radio' name='type' value='Pretrained' onclick='updateImages()'>Pretrained</td><td style='padding: 10px 10px;'><input type='radio' name='type' value='Random' onclick='updateImages()'>Random</td><td style='padding: 10px 10px;'></tr></table><table class='radio-buttons'><tr><td style='padding: 15px 10px;'><input type='radio' name='cat' value='1.0' onclick='updateImages()'>1.0</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='1.5' onclick='updateImages()'>1.5</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='3.0' onclick='updateImages()'>3.0</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='4.5' onclick='updateImages()'>4.5</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='6.0' onclick='updateImages()'>6.0</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='7.5' onclick='updateImages()'>7.5</td></tr></table><img src='gen\pc\ft\United States__hard_limit_20__top_k_32__min_im_6_ranked.png' id='Finetuned_United States' style='display: none;'>
+<img src='gen\guidance\1.0\ft\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_1.0' style='display: none;'>
+<img src='gen\guidance\1.0\random\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Random_1.0' style='display: none;'>
+<img src='gen\guidance\1.0\sd\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_1.0' style='display: none;'>
+<img src='gen\guidance\1.5\ft\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_1.5' style='display: none;'>
+<img src='gen\guidance\1.5\random\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Random_1.5' style='display: none;'>
+<img src='gen\guidance\1.5\sd\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_1.5' style='display: none;'>
+<img src='gen\guidance\3\ft\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_3.0' style='display: none;'>
+<img src='gen\guidance\3\random\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Random_3.0' style='display: none;'>
+<img src='gen\guidance\3\sd\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_3.0' style='display: none;'>
+<img src='gen\guidance\4.5\ft\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_4.5' style='display: none;'>
+<img src='gen\guidance\4.5\random\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Random_4.5' style='display: none;'>
+<img src='gen\guidance\4.5\sd\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_4.5' style='display: none;'>
+<img src='gen\guidance\6\ft\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_6.0' style='display: none;'>
+<img src='gen\guidance\6\random\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Random_6.0' style='display: none;'>
+<img src='gen\guidance\6\sd\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_6.0' style='display: none;'>
+<img src='gen\guidance\7.5\ft\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_7.5' style='display: none;'>
+<img src='gen\guidance\7.5\random\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Random_7.5' style='display: none;'>
+<img src='gen\guidance\7.5\sd\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_7.5' style='display: none;'>
+
+<script>function updateImages(){
+var type = document.querySelector('input[name=type]:checked').value;
+var cat = document.querySelector('input[name=cat]:checked').value;
+var images = document.querySelectorAll('img');
+images.forEach(
+    function(img) {
+        console.log(type + '_' + cat)
+        if (img.id.startsWith(type + '_' + cat)) {
+            img.style.display = 'block';
+        } else {
+            img.style.display = 'none';
+        }
+    }
+);
+}
+</script>
+</body></html>

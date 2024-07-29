@@ -1,0 +1,53 @@
+<html>
+<head><link rel='stylesheet' type='text/css' href='styles.css'>
+<link rel="icon" type="image/png" href="diffmining.png">
+</head>
+<style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+</style>
+    
+<body>
+<h1>Geo</h1>
+<h2>Mining images generated with the finetuned model and ddpm for cfg = 7.5</h2>
+<table class='radio-buttons'><tr><td style='padding: 10px 10px;'><input type='radio' name='type' value='Finetuned' onclick='updateImages()' checked>Finetuned</td><td style='padding: 10px 10px;'><input type='radio' name='type' value='Pretrained' onclick='updateImages()'>Pretrained</td><td style='padding: 10px 10px;'></tr></table><table class='radio-buttons'><tr><td style='padding: 15px 10px;'><input type='radio' name='cat' value='United States' onclick='updateImages()'>United States</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Japan' onclick='updateImages()'>Japan</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='France' onclick='updateImages()'>France</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Italy' onclick='updateImages()'>Italy</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='United Kingdom' onclick='updateImages()'>United Kingdom</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Brazil' onclick='updateImages()'>Brazil</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Russia' onclick='updateImages()'>Russia</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Thailand' onclick='updateImages()'>Thailand</td><td style='padding: 10px 10px;'><input type='radio' name='cat' value='Nigeria' onclick='updateImages()'>Nigeria</td><td style='padding: 10px 10px;'><input type='radio' name='cat' value='India' onclick='updateImages()'>India</td></tr></table>
+<img src='gen\pc\ft\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_Brazil' style='display: none;'>
+<img src='gen\pc\ft\France__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_France' style='display: none;'>
+<img src='gen\pc\ft\India__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_India' style='display: none;'>
+<img src='gen\pc\ft\Italy__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_Italy' style='display: none;'>
+<img src='gen\pc\ft\Japan__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_Japan' style='display: none;'>
+<img src='gen\pc\ft\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_Nigeria' style='display: none;'>
+<img src='gen\pc\ft\Russia__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_Russia' style='display: none;'>
+<img src='gen\pc\ft\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_Thailand' style='display: none;'>
+<img src='gen\pc\ft\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_United Kingdom' style='display: none;'>
+<img src='gen\pc\ft\United States__hard_limit_20__top_k_32__min_im_0.png' id='Finetuned_United States' style='display: none;'>
+<img src='gen\pc\pt\Brazil__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_Brazil' style='display: none;'>
+<img src='gen\pc\pt\France__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_France' style='display: none;'>
+<img src='gen\pc\pt\India__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_India' style='display: none;'>
+<img src='gen\pc\pt\Italy__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_Italy' style='display: none;'>
+<img src='gen\pc\pt\Japan__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_Japan' style='display: none;'>
+<img src='gen\pc\pt\Nigeria__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_Nigeria' style='display: none;'>
+<img src='gen\pc\pt\Russia__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_Russia' style='display: none;'>
+<img src='gen\pc\pt\Thailand__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_Thailand' style='display: none;'>
+<img src='gen\pc\pt\United Kingdom__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_United Kingdom' style='display: none;'>
+<img src='gen\pc\pt\United States__hard_limit_20__top_k_32__min_im_0.png' id='Pretrained_United States' style='display: none;'>
+<script>function updateImages(){
+var type = document.querySelector('input[name=type]:checked').value;
+var cat = document.querySelector('input[name=cat]:checked').value;
+var images = document.querySelectorAll('img');
+images.forEach(
+    function(img) {
+        console.log(type + '_' + cat)
+        if (img.id.startsWith(type + '_' + cat)) {
+            img.style.display = 'block';
+        } else {
+            img.style.display = 'none';
+        }
+    }
+);
+}
+</script>
+</body></html>
