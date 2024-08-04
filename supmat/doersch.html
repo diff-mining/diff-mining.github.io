@@ -1,0 +1,41 @@
+<html>
+<head><link rel='stylesheet' type='text/css' href='styles.css'>
+<link rel="icon" type="image/png" href="diffmining.png">
+</head>
+<style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+</style>
+    
+<body>
+<h1>Comparison with Doersch et al. 2013</h1>
+<table class='radio-buttons'><tr><td style='padding: 15px 10px;'><input type='radio' name='cat' value='United States' onclick='updateImages()'>United States</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Japan' onclick='updateImages()'>Japan</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='France' onclick='updateImages()'>France</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Italy' onclick='updateImages()'>Italy</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='United Kingdom' onclick='updateImages()'>United Kingdom</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Brazil' onclick='updateImages()'>Brazil</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Russia' onclick='updateImages()'>Russia</td><td style='padding: 15px 10px;'><input type='radio' name='cat' value='Thailand' onclick='updateImages()'>Thailand</td><td style='padding: 10px 10px;'><input type='radio' name='cat' value='Nigeria' onclick='updateImages()'>Nigeria</td><td style='padding: 10px 10px;'><input type='radio' name='cat' value='India' onclick='updateImages()'>India</td></tr></table>
+<img src='doersch\United States.png' id='United States' style='display: none;'>
+<img src='doersch\Brazil.png' id='Brazil' style='display: none;'>
+<img src='doersch\France.png' id='France' style='display: none;'>
+<img src='doersch\India.png' id='India' style='display: none;'>
+<img src='doersch\Italy.png' id='Italy' style='display: none;'>
+<img src='doersch\Japan.png' id='Japan' style='display: none;'>
+<img src='doersch\Nigeria.png' id='Nigeria' style='display: none;'>
+<img src='doersch\Russia.png' id='Russia' style='display: none;'>
+<img src='doersch\Thailand.png' id='Thailand' style='display: none;'>
+<img src='doersch\United Kingdom.png' id='United Kingdom' style='display: none;'>
+<script>function updateImages(){
+var cat = document.querySelector('input[name=cat]:checked').value;
+var images = document.querySelectorAll('img');
+images.forEach(
+    function(img) {
+        console.log(cat)
+        if (img.id.startsWith(cat)) {
+            img.style.display = 'block';
+        } else {
+            img.style.display = 'none';
+        }
+    }
+);
+}
+</script>
+</body></html>

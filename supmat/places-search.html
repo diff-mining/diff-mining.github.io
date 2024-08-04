@@ -387,6 +387,15 @@
         </datalist>
     </form>
     <br>
+    <form>
+        <div>
+        <input type="radio" name="modelType" value="finetuned" checked onclick="updateImages()">Finetuned
+        <input type="radio" name="modelType" value="pretrained" onclick="updateImages()">Pretrained
+        <input type="radio" name="modelType" value="random" onclick="updateImages()">Random
+        </div>
+        <br>
+    </form>
+    <br>
     <div id="imageContainer"></div>
     </center>
 
@@ -759,10 +768,20 @@
         "pharmacy",
 
     ];
+    var currentClassName = "";
 
     function searchImages(className) {
+        currentClassName = className;
+        updateImages();
+    }
+
+    function updateImages() {
         var container = document.getElementById("imageContainer");
         container.innerHTML = "";
+        if (currentClassName === "") return;
+        var modelType = document.querySelector('input[name="modelType"]:checked').value;
+        var folderPrefix = modelType === "finetuned" ? "ft" : "pt";
+        var filenameSuffix = modelType === "random" ? "random" : "ranked";
 
         var images = {
                 street: ['street__hard_limit_7__top_k_6__min_im_6_ranked.png'],
@@ -1133,12 +1152,10 @@
 
     };
 
-    var imageNames = images[className.replace(/ /g, '_')];
-
+    var imageNames = images[currentClassName.replace(/ /g, '_')];
     for (var i = 0; i < imageNames.length; i++) {
         var image = document.createElement("img");
-
-        image.src = "places/ft/" + imageNames[i];
+        image.src = "places/" + folderPrefix + "/" + imageNames[i].replace("ranked.png", filenameSuffix + ".png");
         container.appendChild(image);
     }
     }
