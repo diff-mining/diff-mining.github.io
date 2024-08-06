@@ -9,6 +9,12 @@ body {
   margin: auto;
 }
 
+@media screen and (max-width: 1000px) {
+  body {
+    max-width: 80%;
+  }
+}
+
 .content {
   display: flex;
   flex-direction: row;
@@ -78,6 +84,13 @@ h3 {
 
 .image-container {
   display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  .image-container {
+    width: 90vw;
+    margin-left: calc(-41vw + 45%);
+  }
 }
 
 .column {
@@ -281,4 +294,47 @@ table {
 
 .carousel-inner{
   overflow: visible;
+}
+
+.carousel {
+  width: 80vw;
+  margin-left: calc(-39.5vw + 50%);
+}
+
+
+figure {
+  margin: 2em 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 1em;
+  text-align: justify;
+  padding: 0 1em;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .carousel {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  figure {
+    margin: 1em 0;
+  }
+
+  figcaption {
+    font-size: 0.8em;
+    padding: 0 0.5em;
+    margin-top: 0.5em;
+    width: 100%; /* Increased width of figcaption */
+  }
+
+  .carousel-caption {
+    font-size: 0.9em;
+  }
+
 }
