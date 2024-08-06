@@ -221,6 +221,58 @@ main {
   margin-right: 0.2rem;
 }
 
+@media screen and (max-width: 1000px) {
+  .button.is-normal {
+    font-size: 2em;
+  }  
+
+  body {
+    font-size: 1.2em; /* Increase base font size */
+  }
+
+  h1 {
+    font-size: 48px; /* Increase from 44px */
+  }
+
+  h2 {
+    font-size: 40px; /* Increase from 33px */
+  }
+
+  h3 {
+    font-size: 32px; /* Increase from 22px */
+  }
+
+  .button.is-normal {
+    font-size: 2.2em; /* Increase from 2.2em */
+  }
+
+  .authors {
+    font-size: 36px; /* Increase from 33px */
+  }
+
+  .unis {
+    font-size: 1.7em; /* Increase from 1.54em */
+  }
+
+  .cvpr {
+    font-size: 1.8em; /* Increase from 1.65em */
+  }
+
+  div.text {
+    font-size: 28px; /* Increase from 22px */
+  }
+
+  .copy-code-button {
+    font-size: 16.5px; /* Increase from 15.4px */
+  }
+
+  .icon {
+    height: 1.55rem; /* Increase from 1.43rem */
+    width: 1.55rem; /* Increase from 1.43rem */
+  }
+
+}
+
 .fa {
   margin-right: 0.2rem;
 }
@@ -334,7 +386,7 @@ figcaption {
   }
 
   .carousel-caption {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
 }

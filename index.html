@@ -130,7 +130,7 @@ This paper demonstrates how to use generative models trained for image synthesis
 Our approach takes as input a dataset with image-level tags, such as time, geography, or scene labels and produces a visual summary of the elements typical to the different tags, such as the common elements that enable us to determine the location of a streetview panorama. To arrive at this summary, we first finetune a conditional diffusion model on the target dataset. We then use the finetuned model to define a pixel-wise typicality measure by assessing the degree to which the label conditioning impacts the model's reconstruction of an image. We mine visual elements by aggregating typicality on patches, selecting the most typical ones, and clustering them using features extracted from the finetuned model. 
 </div>
 
-<div id="carousel2" class="carousel carousel-dark slide" style="margin-bottom: 10%;">
+<div id="carousel2" class="carousel carousel-dark slide" style="margin-bottom: 5%;">
   <div class="carousel-indicators" style="top: 95%;">
     <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -193,7 +193,7 @@ Having a diffusion model finetuned on a dataset of interest enables further appl
   </figcaption>
 </figure>
 
-<h3>2. X-ray localization. 🩻</h3>
+<h3 style="margin-top: 2em; margin-bottom: 1em;">2. X-ray localization. 🩻</h3>
 <div class="text" style="margin-top: 0em; margin-bottom: 2em;">
 We test the localization property of typicality by finetuning Stable Diffusion on the ChestX-ray8 dataset, containing X-rays of patients who may suffer from a combination of various thorax diseases. Finetuning clearly improves the localization, which we quantify by computing the area under the precision recall-curve (AUC-PR) associated with ground truth ROIs. We see consistent improvement of this measure when finetuning the network (from 3.2% to 9.6%), ranging from +3.5% for Pneumonothorax (from 3% to 6%) to +14.6% for Mass (from 2% to 16.6%), which are respectively the least and most localized diseases. Similar to our other experiments, finetuning uses only image labels without localization supervision.
 </div>
@@ -207,7 +207,7 @@ We test the localization property of typicality by finetuning Stable Diffusion o
   </figcaption>
 </figure>
 
-<h2 style="margin-top: 1em;">Cite us</h2>
+<h2 style="margin-top: 2em;">Cite us</h2>
 <pre><code class="language-bibtex">
   @article{diff-mining,
     title = {Diffusion Models as Data Mining Tools},
@@ -217,7 +217,7 @@ We test the localization property of typicality by finetuning Stable Diffusion o
   }</code><button class="copy-code-button"><i class="fa-regular fa-clone"></i></button>
 </pre>
 
-<h2 style="margin-top: 1em;">Acknowledgments</h2>
+<h2 style="margin-top: 2em;">Acknowledgments</h2>
 <p>
 <div class="text">
 This work was partially supported by the European Research Council (ERC project DISCOVER, number 101076028) and leveraged the HPC resources of IDRIS under the allocation AD011012905R1, AD0110129052 made by GENCI. It was also partially supported by ONR MURI. We thank Grace Luo for data, code, and discussion; Loic Landreu and David Picard for insights on geographical representations and diffusion; Carl Doersch, for project advice and implementation insights; Sophia Koepke for feedback on our manuscript. 
