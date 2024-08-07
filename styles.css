@@ -114,6 +114,15 @@ pre {
   border-radius: 4px;
 }
 
+
+.conf {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-top: -2.2rem;
+  margin-bottom: -1.2rem;
+}
+
+
 code {
   display: block;
   overflow-x: auto;
@@ -222,9 +231,6 @@ main {
 }
 
 @media screen and (max-width: 1000px) {
-  .button.is-normal {
-    font-size: 2em;
-  }  
 
   body {
     font-size: 1.2em; /* Increase base font size */
@@ -243,7 +249,14 @@ main {
   }
 
   .button.is-normal {
-    font-size: 2.2em; /* Increase from 2.2em */
+    font-size: 1.5em; /* Increase from 2.2em */
+  }
+
+  .conf {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: -2.2rem;
+    margin-bottom: -1.2rem;
   }
 
   .authors {
@@ -251,6 +264,10 @@ main {
   }
 
   .unis {
+    font-size: 1.7em; /* Increase from 1.54em */
+  }
+
+  .conf {
     font-size: 1.7em; /* Increase from 1.54em */
   }
 
