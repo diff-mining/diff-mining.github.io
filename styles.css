@@ -230,8 +230,21 @@ main {
   margin-right: 0.2rem;
 }
 
-@media screen and (max-width: 1000px) {
 
+.authors {
+  font-size: 30px;
+  max-width: 130%;
+}
+
+.unis {
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1000px) {
   body {
     font-size: 1.2em; /* Increase base font size */
   }
@@ -288,22 +301,215 @@ main {
     width: 1.55rem; /* Increase from 1.43rem */
   }
 
+  .activate-on-resize {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  body {
+    font-size: 0.9em; /* Increase base font size */
+  }
+
+  h1 {
+    font-size: 43.2px; /* Increase from 44px */
+  }
+
+  h2 {
+    font-size: 36px; /* Increase from 33px */
+  }
+
+  h3 {
+    font-size: 28.8px; /* Increase from 22px */
+  }
+
+  .button.is-normal {
+    font-size: 1.35em; /* Increase from 2.2em */
+  }
+
+  .conf {
+    font-size: 1.98em;
+    font-weight: bold;
+    margin-top: -1.5rem;
+    margin-bottom: -1.0rem;
+  }
+
+  .authors {
+    font-size: 20.4px; /* Increase from 33px */
+  }
+
+  .unis {
+    font-size: 1.2em; /* Increase from 1.54em */
+  }
+
+  .conf {
+    font-size: 1.53em; /* Increase from 1.54em */
+  }
+
+  .cvpr {
+    font-size: 1.62em; /* Increase from 1.65em */
+  }
+
+  div.text {
+    font-size: 18.2px; /* Increase from 22px */
+  }
+
+  .copy-code-button {
+    font-size: 14.85px; /* Increase from 15.4px */
+  }
+
+  .icon {
+    height: 1.395rem; /* Increase from 1.43rem */
+    width: 1.395rem; /* Increase from 1.43rem */
+  }
+
+  .activate-on-resize {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  body {
+    font-size: 0.72em; /* Increase base font size */
+  }
+
+  h1 {
+    font-size: 34.56px; /* Increase from 44px */
+  }
+
+  h2 {
+    font-size: 28.8px; /* Increase from 33px */
+  }
+
+  h3 {
+    font-size: 23.04px; /* Increase from 22px */
+  }
+
+  .button.is-normal {
+    font-size: 1.28em; /* Increase from 2.2em */
+    margin: -.1em; /* Add margin between buttons */
+  }
+
+  .conf {
+    font-size: 1.58em;
+    font-weight: bold;
+    margin-top: -0.8rem;
+    margin-bottom: -0.8rem;
+  }
+
+  .authors {
+    font-size: 16.32px; /* Increase from 33px */
+  }
+
+  .unis {
+    font-size: 0.96em; /* Increase from 1.54em */
+  }
+
+  .conf {
+    font-size: 1.32em; /* Increase from 1.54em */
+  }
+
+  .cvpr {
+    font-size: 1.29em; /* Increase from 1.65em */
+  }
+
+  div.text {
+    font-size: 14.56px; /* Increase from 22px */
+  }
+
+  .copy-code-button {
+    font-size: 11.88px; /* Increase from 15.4px */
+  }
+
+  .icon {
+    height: 1.116rem; /* Increase from 1.43rem */
+    width: 1.116rem; /* Increase from 1.43rem */
+  }
+
+  .activate-on-resize {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 0.648em; /* Decrease base font size by 10% */
+  }
+
+  h1 {
+    font-size: 20px; /* Decrease from 34.56px by 10% */
+  }
+
+  h2 {
+    font-size: 15.92px; /* Decrease from 28.8px by 10% */
+  }
+
+  h3 {
+    font-size: 12.736px; /* Decrease from 23.04px by 10% */
+  }
+
+  .button.is-normal {
+    font-size: 0.9em; /* Adjusted for better responsiveness */
+    margin: -.50em; /* Add margin between buttons */
+  }
+
+  .conf {
+    font-size: 1.422em; /* Decrease from 1.58em by 10% */
+    font-weight: bold;
+    margin-top: -0.8rem;
+    margin-bottom: -0.8rem;
+  }
+
+  .authors {
+    font-size: 14.688px; /* Decrease from 16.32px by 10% */
+  }
+
+  .unis {
+    font-size: 0.864em; /* Decrease from 0.96em by 10% */
+  }
+
+  .conf {
+    font-size: 1.188em; /* Decrease from 1.32em by 10% */
+  }
+
+  .cvpr {
+    font-size: 1.161em; /* Decrease from 1.29em by 10% */
+  }
+
+  div.text {
+    font-size: 13.104px; /* Decrease from 14.56px by 10% */
+  }
+
+  .copy-code-button {
+    font-size: 10.692px; /* Decrease from 11.88px by 10% */
+  }
+
+  .icon {
+    height: 1.0044rem; /* Decrease from 1.116rem by 10% */
+    width: 1.0044rem; /* Decrease from 1.116rem by 10% */
+  }
+
+  .activate-on-resize {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .button.is-normal {
+    font-size: 0.8em; /* Adjusted for better responsiveness */
+    margin: -.80em; /* Add margin between buttons */
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .button.is-normal {
+    font-size: 0.6em; /* Adjusted for better responsiveness */
+    margin: -1.2em; /* Add margin between buttons */
+  }
 }
 
 .fa {
   margin-right: 0.2rem;
-}
-
-.authors {
-  font-size: 30px;
-  max-width: 130%;
-}
-
-.unis {
-  font-size: 1.4em;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  text-align: center;
 }
 
 .cvpr{
@@ -406,4 +612,22 @@ figcaption {
     font-size: 0.8em;
   }
 
+}
+
+@media screen and (max-width: 880px) {
+  .carousel-caption {
+    font-size: 0.1em;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  figcaption {
+    font-size: 0.75em;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  figcaption {
+    font-size: 0.65em;
+  }
 }
