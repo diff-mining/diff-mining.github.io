@@ -1,6 +1,6 @@
-@article{diff-mining,
+@inproceedings{diff-mining,
   title = {Diffusion Models as Data Mining Tools},
   author = {Siglidis, Ioannis and Holynski, Aleksander and Efros, A. Alexei and Aubry, Mathieu and Ginosar, Shiry},
-  journal = {ECCV},
+  booktitle = {ECCV},
   year = {2024},
 }
