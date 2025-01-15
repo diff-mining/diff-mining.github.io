@@ -15,6 +15,7 @@ body {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true,
     }
+    jax: ["input/TeX", "output/SVG"],
   });
 </script>
 </head>
@@ -73,20 +74,20 @@ body {
     <p/>
 
     <h1>Connection to mutual information (post-publication)</h1>
-    Very interestingly a <a href="https://arxiv.org/pdf/2310.07972">recent paper</a> [1] reveals that what we call "typicality" is a mutual information score I(x;c) between an image x and a label c (see i^{s} in eq. 5).
+    Very interestingly a <a href="https://arxiv.org/pdf/2310.07972">recent paper</a> [1] reveals that what we call "typicality" is a mutual information score $I(x;c)$ between an image x and a label c (see $i^{s}$ in eq. 5).
     Even more interestingly it reveals that if the denoiser converges into the optimal MMSE estimator, typicality:
     \begin{align}
-    \mathbf{T}(x|c) &= \mathbb{E}_{\epsilon,t}\left[L_t(x, \epsilon, \varnothing) - L_t(x, \epsilon, c)\right],
+    \mathbf{T}(x|c) &= \mathbb{E}_{\epsilon,t}\left[L_t(x, \epsilon, \varnothing) - L_t(x, \epsilon, c)\right],\\
     \mathbf{T}(x|c) &= \mathbb{E}_{\epsilon,t}\left[\left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, \varnothing)-\epsilon\right\|^2 - \left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, c)-\epsilon\right\|^2\right],
     \label{a}
     \end{align}
     becomes equal to:
     \begin{equation}
-    \mathbf{T}(x|c) &= \mathbb{E}_{\epsilon,t}\left[\left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, \varnothing)-\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, c) \right\|^2\right].
+    \mathbb{E}_{\epsilon,t}\left[\left\|\epsilon_\theta(\text{noise}(x, \epsilon, t), t, \varnothing)-\epsilon_\theta(\text{noise}(x, \epsilon, t), t, c) \right\|^2\right]
     \label{b}
     \end{equation}
     The later is interestingly the squared <a href="https://arxiv.org/pdf/2308.08947">relevance map</a> $\mathcal{R}_{x, I, T}$ from eq. 3 of Mirzaei et al. 2025 [2].
-    Note that the proof of [1] (see Appendix B) is done for integral definition of the expecations in $\ref{a,b}$ (not for samples) and that the original relevance map as in [2] is evaluated only on a single sample.
+    Note that the proof of [1] (see Appendix B) is done for integral definition of the expecations in $\eqref{a,b}$ (not for samples) and that the original relevance map as in [2] is evaluated only on a single sample.
     Also, note that by definition typicallity is a signed measure whose order signifies in practice positive correlation to the label $c$ while relevance map is unsigned.
     As I write in my upcoming dissertation mutual information for discriminative clustering (the main clustering technique for seminal mining works such as <a href="http://graphics.cs.cmu.edu/projects/whatMakesParis/">"What makes Paris look like Paris?"</a> [3]) is a very old idea for discriminative clustering [4] however didn’t work for reasons of optimization as Ohl et al. 2023 [5] showed.
 
