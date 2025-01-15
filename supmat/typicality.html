@@ -73,17 +73,16 @@ body {
     <p/>
 
     <h1>Connection to mutual information</h1>
-    <i>Note: Edit made added post-publication.</i> <br>
+    <i>Note: Section added post-publication.</i> <br><br>
     Very interestingly a <a href="https://arxiv.org/pdf/2310.07972">recent paper</a> [1] reveals that what we call "typicality" is a mutual information score $I(x;c)$ between an image x and a label c (see $i^{s}$ in eq. 5).
     Even more interestingly it reveals that if the denoiser converges into the optimal MMSE estimator, typicality:
-    \begin{align}
-    \mathbf{T}(x|c) &= \mathbb{E}_{\epsilon,t}\left[L_t(x, \epsilon, \varnothing) - L_t(x, \epsilon, c)\right],\\
-    \mathbf{T}(x|c) &= \mathbb{E}_{\epsilon,t}\left[\left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, \varnothing)-\epsilon\right\|^2 - \left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, c)-\epsilon\right\|^2\right],
+    \begin{equation}
+    \mathbf{T}(x|c) &= \mathbb{E}_{\epsilon,t}\left[L_t(x, \epsilon, \varnothing) - L_t(x, \epsilon, c)\right] = \mathbb{E}_{\epsilon,t}\left[\left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, \varnothing)-\epsilon\right\|^2 - \left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, c)-\epsilon\right\|^2\right], \tag{5}
     \label{a}
     \end{align}
-    becomes equal to:
+    becomes equivalent to:
     \begin{equation}
-    \mathbb{E}_{\epsilon,t}\left[\left\|\epsilon_\theta(\text{noise}(x, \epsilon, t), t, \varnothing)-\epsilon_\theta(\text{noise}(x, \epsilon, t), t, c) \right\|^2\right]
+    \mathbb{E}_{\epsilon,t}\left[\left\|\epsilon_\theta(\text{noise}(x, \epsilon, t), t, \varnothing)-\epsilon_\theta(\text{noise}(x, \epsilon, t), t, c) \right\|^2\right].\tag{6}
     \label{b}
     \end{equation}
     The later is interestingly the squared <a href="https://arxiv.org/pdf/2308.08947">relevance map</a> $\mathcal{R}_{x, I, T}$ from eq. 3 of Mirzaei et al. 2025 [2].
