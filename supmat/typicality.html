@@ -77,7 +77,7 @@ body {
     Very interestingly a <a href="https://arxiv.org/pdf/2310.07972">recent paper</a> [1] reveals that what we call "typicality" is the mutual information $I(x;c)$ between an image x and a label c (see $i^{s}$ in eq. 5).
     Even more interestingly it reveals that if the denoiser converges into the optimal MMSE estimator, typicality:
     \begin{equation}
-    \mathbf{T}(x|c) &= \mathbb{E}_{\epsilon,t}\left[L_t(x, \epsilon, \varnothing) - L_t(x, \epsilon, c)\right] = \mathbb{E}_{\epsilon,t}\left[\left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, \varnothing)-\epsilon\right\|^2 - \left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, c)-\epsilon\right\|^2\right], \tag{5}
+    \mathbf{T}(x|c) = \mathbb{E}_{\epsilon,t}\left[L_t(x, \epsilon, \varnothing) - L_t(x, \epsilon, c)\right] = \mathbb{E}_{\epsilon,t}\left[\left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, \varnothing)-\epsilon\right\|^2 - \left\|\epsilon_\theta(\operatorname{noise}(x, \epsilon, t), t, c)-\epsilon\right\|^2\right], \tag{5}
     \label{a}
     \end{equation}
     becomes equivalent to:
